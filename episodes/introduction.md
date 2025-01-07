@@ -17,18 +17,13 @@ exercises: 2
 
 - Introduce the use cases of data visualization for the humanities
 - Introduce the concept of statistical inference to humanities researchers
-- Teach humanities researchers to visualize data with the purpose of inferring information from it
+- Teach humanities researchers to visualize data with python to infer information from it
 - Teach humanities researchers to use data visualization and statistical inference for data storytelling
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.txt) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
 
 What you need to know is that there are three sections required for a valid
 Carpentries lesson:
