@@ -1,5 +1,5 @@
 ---
-title: "Using Markdown"
+title: "Data Visualization for Storytelling and Statistical Inference"
 teaching: 10
 exercises: 2
 ---
