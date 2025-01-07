@@ -6,14 +6,19 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- How can the humanities benefit from data visualization?
+- What are some of the most useful graphs for humanities research?
+- What is inferential statistics? 
+- How can python be used for data visualization, to serve statistical inference and data storytelling?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Introduce the use cases of data visualization for the humanities
+- Introduce the concept of statistical inference to humanities researchers
+- Teach humanities researchers to visualize data with the purpose of inferring information from it
+- Teach humanities researchers to use data visualization and statistical inference for data storytelling
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
