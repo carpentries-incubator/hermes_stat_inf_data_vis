@@ -16,6 +16,9 @@
     <loc>https://Goli-SF.github.io/stat_inf_data_vis/aio.html</loc>
   </url>
   <url>
+    <loc>https://Goli-SF.github.io/stat_inf_data_vis/graph-categories.html</loc>
+  </url>
+  <url>
     <loc>https://Goli-SF.github.io/stat_inf_data_vis/images.html</loc>
   </url>
   <url>
@@ -35,6 +38,9 @@
   </url>
   <url>
     <loc>https://Goli-SF.github.io/stat_inf_data_vis/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://Goli-SF.github.io/stat_inf_data_vis/instructor/graph-categories.html</loc>
   </url>
   <url>
     <loc>https://Goli-SF.github.io/stat_inf_data_vis/instructor/images.html</loc>
@@ -58,6 +64,9 @@
     <loc>https://Goli-SF.github.io/stat_inf_data_vis/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://Goli-SF.github.io/stat_inf_data_vis/instructor/statistical-inference.html</loc>
+  </url>
+  <url>
     <loc>https://Goli-SF.github.io/stat_inf_data_vis/instructor-notes.html</loc>
   </url>
   <url>
@@ -71,5 +80,8 @@
   </url>
   <url>
     <loc>https://Goli-SF.github.io/stat_inf_data_vis/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://Goli-SF.github.io/stat_inf_data_vis/statistical-inference.html</loc>
   </url>
 </urlset>
