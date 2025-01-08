@@ -1,5 +1,5 @@
 ---
-title: 'graph_categories.md'
+title: 'Graph Categories'
 teaching: 10
 exercises: 2
 ---

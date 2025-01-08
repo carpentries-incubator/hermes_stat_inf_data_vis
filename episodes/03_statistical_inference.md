@@ -1,5 +1,5 @@
 ---
-title: 'statistical_inference'
+title: 'Statistical Inference'
 teaching: 10
 exercises: 2
 ---

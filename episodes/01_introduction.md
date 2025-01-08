@@ -1,5 +1,5 @@
 ---
-title: "Data Visualization for Storytelling and Statistical Inference"
+title: "Introduction"
 teaching: 10
 exercises: 2
 ---

@@ -65,9 +65,9 @@ contact: 'team@carpentries.org'
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.md
-- graph-categories.Rmd
-- statistical-inference.Rmd
+- 01_introduction.md
+- 02_graph_categories.md
+- 03_statistical_inference.md
 
 # Information for Learners
 learners: 
