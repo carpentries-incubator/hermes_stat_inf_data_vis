@@ -42,7 +42,7 @@ Graphical Installer *Anaconda3-...-Windows-x86_64.exe*.)
 3. Install Python 3 by running the Anaconda Installer, using all of the defaults for installation *except* make sure to check 
 **Add Anaconda to my PATH environment variable**.
 
-This [video tutorial](https://carpentries.github.io/workshop-template/install_instructions/#video-tutorial-1) can help you with the installation. 
+This [video tutorial](https://www.youtube.com/watch?v=xxQ0mzZ8UvA) can help you with the installation. 
 
 ::::::::::::::::::::::::
 
@@ -54,7 +54,7 @@ This [video tutorial](https://carpentries.github.io/workshop-template/install_in
 2. Download the Anaconda Installer with Python 3 for macOS (you can either use the Graphical or the Command Line Installer).
 3. Install Python 3 by running the Anaconda Installer using all of the defaults for installation.
 
-This [video tutorial](https://carpentries.github.io/workshop-template/install_instructions/#video-tutorial-2) can help you with the installation.
+This [video tutorial](https://www.youtube.com/watch?v=TcSAln46u9U) can help you with the installation.
 
 
 ::::::::::::::::::::::::
