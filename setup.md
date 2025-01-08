@@ -14,6 +14,8 @@ Otherwise, you can directly load it into your code using the following link:
 https://raw.githubusercontent.com/Goli-SF/stat_inf_data_vis/tree/main/episodes/data/income_happiness_correlation.csv
 ```
 
+<span style="color: red;">The above link should be updated later.</span> 
+
 The data set originates from [Kaggle](https://www.kaggle.com/datasets/levyedgar44/income-and-happiness-correction).
 
 ## Software Setup
