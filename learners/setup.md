@@ -4,7 +4,7 @@ title: Setup
 
 This lesson teaches you how to visualize data using Python. 
 
-## Data Sets
+## Data Set
 
 If you wish to save the the data set on your computer, go ahead and download the 
 [Income and Happiness Correlation dataset](data/income_happiness_correlation.csv) and save it to your working directory. 
@@ -22,7 +22,7 @@ The data set originates from [Kaggle](https://www.kaggle.com/datasets/levyedgar4
 
 ::::::::::::::::::::::::::::::::::::::: discussion
 
-### Details
+### Python and Jupyter Notebook/Google Colab
 
 To do the exercises in this lesson, you need an IDE (Integrated Development Environment). We recommend you use Jupyter Notebook or an equivalent 
 (such as [Google Colab](https://colab.google/)). 
