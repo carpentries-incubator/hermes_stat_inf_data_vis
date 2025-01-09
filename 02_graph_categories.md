@@ -6,99 +6,76 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- Why is data visualization important in humanities research?
+- What are some effective graph types for use in humanities research?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Discuss the benefits of data visualization in humanities research.
+- Explore the most effective graph types for data visualization in the humanities.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Introduction
-
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown][pandoc] for static files (with extension `.md`) and
-[R Markdown][r-markdown] for dynamic files that can render code into output
-(with extension `.Rmd`). Please refer to the [Introduction to The Carpentries
-Workbench][carpentries-workbench] for full documentation.
-
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
-
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Challenge 1: Can you do it?
+## Question
 
-What is the output of this command?
-
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+Why is it helpful to visualize data in humanities research?
 
 :::::::::::::::::::::::: solution 
 
-## Output
+## Answer
  
-```output
-[1] "This new lesson looks good"
-```
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
+Data visualization has multiple purposes. It can help you understand trends and correlations in a dataset. 
+It can also help you introduce a dataset to others in scientific texts or in data storytelling.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Figures
+Most graphs used for data visualization fall into one of the following four general categories, based on their function. 
+In this lesson, we won’t cover how to create all of these graphs in Python, but will focus on a few that are 
+useful for statistical inference and data storytelling with our specific dataset. However, 
+it's helpful to know the names of these graphs and understand the contexts in which they can be applied.
 
-You can include figures generated from R Markdown:
+## 1. Explore Relationships between two or more Features
 
-```{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"}
-pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
-  init.angle = 315, 
-  col = c("deepskyblue", "yellow", "yellow3"), 
-  border = FALSE
-)
-```
-Or you can use pandoc markdown for static figures with the following syntax:
+**Scatter Plot:** "A scatter plot (aka scatter chart, scatter graph) uses dots to represent values for two different 
+numeric variables. The position of each dot on the horizontal and vertical axis indicates values for an individual 
+data point. Scatter plots are used to observe relationships between variables." 
+([Atlassian](https://www.atlassian.com/data/charts/what-is-a-scatter-plot)) For example, the X-axis can represent 
+the age of the employees at a company, where the Y-axis represents their income.
 
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
+**Bubble Chart:** "A bubble chart (aka bubble plot) is an extension of the scatter plot used to look at 
+relationships between three numeric variables. Each dot in a bubble chart corresponds with a single data point, 
+and the variables’ values for each point are indicated by horizontal position, vertical position, and dot size." 
+([Atlassian](https://www.atlassian.com/data/charts/bubble-chart-complete-guide)) In addition to representing 
+three *numerical* features with their X and Y values and bubble size, a bubble chart can also represent a 
+*categorical* feature through color. For example, if the X-axis represents the age of employees at a company, 
+the Y-axis represents their income, and the size of the bubbles represents their years of work experience, 
+the color of the bubbles can indicate their gender.
 
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+**Heatmap:** "A heatmap (aka heat map) depicts values for a main variable of interest across two axis variables 
+as a grid of colored squares. The axis variables are divided into ranges like a bar chart or histogram, 
+and each cell’s color indicates the value of the main variable in the corresponding cell range." 
+([Atlassian](https://www.atlassian.com/data/charts/heatmap-complete-guide))
 
-## Math
+**Correlogram:** "A correlogram is a variant of the heatmap that replaces each of the variables on the two axes 
+with a list of numeric variables in the dataset. Each cell depicts the relationship between the intersecting 
+variables, such as a linear correlation. Sometimes, these simple correlations are replaced with more complex 
+representations of relationship, like scatter plots. Correlograms are often seen in an exploratory role, 
+helping analysts understand relationships between variables in service of building descriptive or predictive 
+statistical models." ([Atlassian](https://www.atlassian.com/data/charts/heatmap-complete-guide)) 
+For example, a correlogram can reveal the correlations between features such as the sepal width, petal length, 
+and petal width of an iris, showing how closely these attributes are related to each other.
 
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
+Below you can see examples of a scatter plot, a bubble chart, a heatmap and a correlogram:
 
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
+![](fig/scatter_plot_and_bubble_chart.png)
 
-Cool, right?
+![](fig/heatmap_and_correlogram.png)
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
