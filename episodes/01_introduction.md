@@ -25,90 +25,38 @@ exercises: 2
 ## Introduction
 
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson:
+**Who can benefit from this lesson?**
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+<u>The main goal of this lesson is to demonstrate the importance of data visualization and how it can unlock a variety of learning and research pathways—ranging from exploratory data analysis and statistical inference to understanding machine learning processes and data storytelling.</u>
+
+If you're looking for ways to approximately predict specific values based on a given dataset for data storytelling, or if you've ever wondered how machine learning models that predict values (rather than categories) work, this lesson is for you. It will introduce you to the concept of statistical inference—a mathematical calculation used in predictive machine learning algorithms—through various data visualization techniques. These visualization methods will also enhance your data storytelling skills, not only in describing existing data but also in predicting values based on the available data. 
+
+Data visualization is central to this lesson, serving as both the means and the goal. You’ll not only learn to write Python code and engage in hands-on data visualization, but also discover how to explore, understand, and predict dataset values through visualization techniques.
+
+**How is this lesson structured?**
+
+* The lesson begins with a brief overview of various graph types and their applications.
+* Next, you'll explore statistical inference and linear regression, which will help you understand correlations and make predictions based on datasets. These concepts also provide foundational insights into how machine learning models work. 
+* Finally, you'll learn how to use visualization techniques to identify patterns within a dataset and extract statistical insights, bringing together the concepts from the previous sections and engaging in hands-on data visualization in Python.  
+
+**What background knowledge do you need for this lesson?**
+
+1. Basic acquaintance with Python
+2. Basic mathematical background
+3. Curiosity to learn more about Python programming, statistics and data storytelling
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+Use the text above as a warm-up activity. Conduct a brief brainstorming session to elicit potential answers to the 
+questions above. Write the answers on the board and engage learners in a discussion about their background knowledge 
+in each area.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Challenge 1: Can you do it?
-
-What is the output of this command?
-
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
-
-:::::::::::::::::::::::: solution 
-
-## Output
- 
-```output
-[1] "This new lesson looks good"
-```
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Figures
-
-You can use standard markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-::::::::::::::::::::::::::::::::::::: callout
-
-Callout sections can highlight information.
-
-They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present "asides": 
-content that is not central to the narrative of the lesson,
-e.g. by providing the answer to a commonly-asked question.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
-
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- An overview of the lesson structure and objectives
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-[r-markdown]: https://rmarkdown.rstudio.com/
+
