@@ -4,6 +4,8 @@ teaching: 10
 exercises: 2
 ---
 
+<span style="color: red;">Update teaching time and number of exercises.</span>
+
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - How can the humanities benefit from data visualization?
