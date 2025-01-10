@@ -74,7 +74,7 @@ Proving or rejecting the hypothesis requires mathematical methods that go beyond
 If you're interested in learning more about hypothesis testing, you can watch the 
 [YouTube video](https://www.youtube.com/watch?v=2fgQ_8AKhJY) on this topic by DATAtab. 
 
-## 2.1. Correlation and Regression in Inferential Statistics
+## 3.1. Correlation and Regression in Inferential Statistics
 
 To perform inferential statistical analysis, it’s important to identify **correlations** between features in the data. 
 If two numerical features are correlated, an increase or decrease in one tends to coincide with an increase or 
