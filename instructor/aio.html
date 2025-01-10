@@ -445,7 +445,7 @@ data storytelling</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Use the text above as a warm-up activity. Conduct a brief
 brainstorming session to elicit potential answers to the questions
@@ -777,7 +777,7 @@ mean in statistics?</p>
   Answer
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><u>Inferential statistics</u>, along with <u>descriptive
 ststistics</u>, are two major methods of statistical analysis.</p>
@@ -841,7 +841,7 @@ hypothesis. Proving or rejecting the hypothesis requires mathematical
 methods that go beyond the scope of this lesson. If you’re interested in
 learning more about hypothesis testing, you can watch the <a href="https://www.youtube.com/watch?v=2fgQ_8AKhJY" class="external-link">YouTube video</a> on
 this topic by DATAtab.</p>
-<section><h2 class="section-heading" id="correlation-and-regression-in-inferential-statistics">Correlation and Regression in Inferential Statistics<a class="anchor" aria-label="anchor" href="#correlation-and-regression-in-inferential-statistics"></a>
+<section><h2 class="section-heading" id="correlation-and-regression-in-inferential-statistics">2.1. Correlation and Regression in Inferential Statistics<a class="anchor" aria-label="anchor" href="#correlation-and-regression-in-inferential-statistics"></a>
 </h2>
 <hr class="half-width">
 <p>To perform inferential statistical analysis, it’s important to
@@ -920,8 +920,11 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>How can you create scatter plots, bubble charts, and correlograms
+with Python?</li>
+<li>When are these graphs useful for inferring information from
+data?</li>
+<li>How are these visualizations valuable for humanists?</li>
 </ul>
 </div>
 </div>
@@ -931,123 +934,259 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Create scatter plots, bubble charts and correlograms in Python,
+using the Seaborn library</li>
+<li>Understand the process of creating these graphs to infer information
+from a dataset</li>
+<li>Comprehend how these graphs can be used to infer insights from
+humanities data and for data storytelling</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<p>In the previous episodes, we explored ten types of graphs and their
+use cases, as well as the concepts of correlation and regression in the
+context of inferential statistics. Now, it’s time to put this knowledge
+into practice! In this episode, we’ll work with the <em>Income and
+Happiness Correlation dataset</em> from Kaggle (see the Setup episode),
+which consists of 111 data points. We’ll visualize this dataset and
+learn how to perform inferential statistical analysis on it.</p>
+<div id="note" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="note" class="callout-inner">
+<h3 class="callout-title">Note</h3>
+<div class="callout-content">
+<p>Before visualizing any dataset, it’s important to answer the
+following questions:</p>
+<ol style="list-style-type: decimal">
+<li>What kind of data is stored in the dataset?</li>
+<li>What are the dimensions of the dataset?</li>
+<li>Why do I want to visualize the dataset? What information do I hope
+to gain through visualization? And which type of graph best represents
+the information I’m looking for?</li>
+</ol>
+<p>Let’s answer these questions for our dataset by writing some
+code.</p>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="exploring-the-dataset">3.1. Exploring the Dataset<a class="anchor" aria-label="anchor" href="#exploring-the-dataset"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
-</button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
-<div class="accordion-body">
-<p>Inline instructor notes can help inform instructors of timing
-challenges associated with the lessons. They appear in the “Instructor
-View”</p>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+<p>The dataset we’re working with is stored in a CSV (comma-separated
+values) file on GitHub. Let’s load it into our notebook and store it in
+a pandas DataFrame called <code>happy_df</code>:</p>
+<pre><code>import pandas as pd
+
+# path to the dataset:
+url= "https://raw.githubusercontent.com/HERMES-DKZ/data_challenges_data_carpentries/main/\
+data_carpentries/statistical_inferece_data_visualization/data_statistical_inference_data_visualization/income_happiness_correlation.csv"
+
+# loading the dataset and storing it in a pandas DataFrame:
+happy_df= pd.read_csv(url)
+
+# displaying the first five rows of the DataFrame:
+happy_df.head()
+</code></pre>
+<figure><img src="../fig/output_1.png" class="figure mx-auto d-block"></figure><p>Take a moment to examine the first five rows of the DataFrame. What
+types of values do you see in each column? Which columns contain
+numerical values, and which contain categorical values? What information
+does the dataset include, and what information might be missing?</p>
+<p>Run the following line of code to gain more information about the
+structure of <code>happy_df</code>:</p>
+<pre><code><span><span class="co"># displaying information about the DataFrame:</span></span>
+<span><span class="fu">happy_df.info</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+<figure><img src="../fig/output_2.png" class="figure mx-auto d-block"></figure><div id="question" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<div id="question" class="callout-inner">
+<h3 class="callout-title">Question</h3>
 <div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
+<p>Now that you know the dataset better, you can answer the question:
+what information can be <em>inferred</em> from this dataset? Which
+column contains values that could be dependent on other features, and
+thereby correlates with them? Would it be possible to predict the values
+of this column, given the values of one or more other columns in the
+dataset?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+  <h4 class="accordion-header" id="headingSolution1">
+  Answer
+  </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<p>Intuitively, one might assume that the <code>happyScore</code> column
+contains values that could be predicted based on the other features. So,
+it may be possible to estimate the average happiness score of a
+country’s population if we know its region, GDP, income inequality, and
+average income. In other words, there might be a correlation between
+<code>happyScore</code> and the other features.</p>
+<p>But how can we determine with greater confidence that such a
+correlation exists, and identify which features are more strongly
+correlated with <code>happyScore</code> than others? Data visualization
+can help us answer these questions.</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+</section><section><h2 class="section-heading" id="drawing-heatmaps">3.2. Drawing Heatmaps<a class="anchor" aria-label="anchor" href="#drawing-heatmaps"></a>
+</h2>
+<hr class="half-width">
+<p>One of the best and easiest ways to visualize correlations is through
+correlographic heatmaps. However, heatmaps can only show how changes in
+one <em>numerical value</em> are correlated with changes in another
+<em>numerical value</em>. Therefore, to create a heatmap of all
+numerical features that could be correlated with
+<code>happyScore</code>, we need to exclude the columns in
+<code>happy_df</code> that contain non-numerical values:</p>
+<pre><code># selecting only the columns whose values are not of type 'object' and storing them in a new DataFrame:
+numerical_df= happy_df.select_dtypes(exclude=['object'])
+
+# displaying the first five rows of the new DataFrame:
+numerical_df.head()</code></pre>
+<figure><img src="../fig/output_3.png" class="figure mx-auto d-block"></figure><p>Now, let’s use the Python library <a href="https://seaborn.pydata.org/" class="external-link">Seaborn</a> to create a heatmap of
+all the values in <code>numerical_df</code>:</p>
+<pre><code>import matplotlib.pyplot as plt
+import seaborn as sns
+
+# creating a matrix that contains the correlation of every feature in the DataFrame with every other feature:
+corr= numerical_df.corr(method='pearson')
+
+# defining the size of the graph:
+plt.figure(figsize=(9, 7))
+
+# generating a heatmap of the corr matrix, using the seaborn library:
+sns.heatmap(corr, annot=True, fmt=".2f", cmap='coolwarm', cbar=True)
+
+# giving the graph a title:
+plt.title('correlation heatmap')
+
+# diyplaying the graph:
+plt.show()</code></pre>
+<figure><img src="../fig/output_4.png" class="figure mx-auto d-block"></figure><p>In the code above, we’ve set <code>cmap='coolwarm'</code>. This means
+we want the heatmap to distinguish between negative and positive
+correlations using red and blue colors. More saturated shades of blue or
+red indicate stronger negative or positive correlation values</p>
+<p>We’ve set <code>annot=True</code> in our code, which means we want
+the correlation coefficients to be displayed on the heatmap. The
+correlation coefficients are calculated using the <a href="https://www.youtube.com/watch?v=k7IctLRiZmo" class="external-link">Pearson method</a> in
+<code>corr= numerical_df.corr(method='pearson')</code>.</p>
+<p>“The Pearson correlation measures the strength of the linear
+relationship between two variables. It has a value between -1 to +1,
+with a value of -1 meaning a total negative linear correlation, 0 being
+no correlation, and +1 meaning a total positive correlation.” (<a href="https://www.sciencedirect.com/topics/computer-science/pearson-correlation#:~:text=content%20were%20calculated.-,The%20Pearson%20correlation%20measures%20the%20strength%20of%20the%20linear%20relationship,meaning%20a%20total%20positive%20correlation" class="external-link">ScienceDirect</a>)</p>
+<div class="section level4">
+<h4 id="how-to-read-and-interpret-the-heatmap">How to read and interpret the heatmap:<a class="anchor" aria-label="anchor" href="#how-to-read-and-interpret-the-heatmap"></a>
+</h4>
+<ul>
+<li>Darker red colors, accompanied by values closer to +1, indicate
+stronger positive correlations. This means that as one value
+<em>increases</em> at a certain rate, the other <em>increases</em> at a
+similar rate.</li>
+<li>Darker blue colors, accompanied by values closer to -1, indicate
+stronger negative correlations. This means that as one value
+<em>increases</em> at a certain rate, the other <em>decreases</em> at a
+similar rate.</li>
+</ul>
+<div id="question-1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within challenge blocks?</h3>
+<div id="question-1" class="callout-inner">
+<h3 class="callout-title">Question</h3>
 <div class="callout-content">
-
+<p>What patterns does the heatmap above reveal?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution2">
+  Answer
+  </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
+<ul>
+<li>Each feature is most strongly correlated with itself, with a
+correlation coefficient of +1.</li>
+<li>Values derived from the same feature demonstrate a high correlation.
+For example, the correlation coefficient between avg_satisfaction and
+adjusted_satisfaction is +0.98, because both stem from the satisfaction
+degree. The same is true about avg_income and median_income with the
+correlation coefficient being +1.</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+<p>To create a more precise graph without redundant information, let’s
+retain only one column from the DataFrame that contains data on
+satisfaction or income, and remove the others:</p>
+<pre><code># dropping a list of columns from numerical_df and storing the result in a new DataFrame:
+reduced_numerical_df= numerical_df.drop(['adjusted_satisfaction', 'std_satisfaction', 'median_income'], axis=1)
+
+reduced_numerical_df.head()</code></pre>
+<figure><img src="../fig/output_5.png" class="figure mx-auto d-block"></figure><p>Let’s create the heatmap again, this time using
+<code>reduced_numerical_df</code> insted of
+<code>numerical_df</code>:</p>
+<pre><code>corr= reduced_numerical_df.corr(method='pearson')
+plt.figure(figsize=(5.5, 4))
+sns.heatmap(corr, annot=True, fmt=".2f", cmap='coolwarm', cbar=True)
+plt.title('reduced correlation heatmap')
+plt.show()</code></pre>
+<figure><img src="../fig/output_6.png" class="figure mx-auto d-block"></figure><div id="insights" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="insights" class="callout-inner">
+<h3 class="callout-title">Insights</h3>
+<div class="callout-content">
+<p>This heatmap is more meaninful than the previous one and reveals more
+insights:</p>
+<ul>
+<li>
+<code>avg_satisfaction</code> and <code>avg_income</code> have a
+correlation greater that +0.5, indicating that higher income is
+correlated with greater life satisfaction.</li>
+<li>There is a strong positive correlation between
+<code>avg_satisfaction</code> and <code>happyScore</code>.</li>
+<li>
+<code>avg_satisfaction</code> shows a positive correlation with
+<code>GDP</code>.</li>
+<li>There is a positive correlation between <code>avg_income</code> and
+<code>happyScore</code>.</li>
+<li>There is a positive correlation between <code>avg_income</code> and
+<code>GDP</code>.</li>
+<li>The slight negative correlation between <code>avg_income</code> and
+<code>income_inequality</code> is also interesting: as the average
+income in a country increases, income inequality tends to decrease.</li>
+<li>There is a negative correlation between <code>GDP</code> and
+<code>income_inequality</code>: higher GDP in a country is associated
+with lower income inequality.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Let’s take a closer look at the correlations we’ve observed between
+the <code>happyScore</code> and the other features by drawing different
+graphs.</p>
+</div>
+</section><section><h2 class="section-heading" id="drawing-scatter-plots">3.3. Drawing Scatter Plots<a class="anchor" aria-label="anchor" href="#drawing-scatter-plots"></a>
 </h2>
 <hr class="half-width">
-<p>Or you can use pandoc markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure></section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<p><strong>WE ARE HERE</strong></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
