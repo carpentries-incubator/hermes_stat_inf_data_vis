@@ -42,7 +42,7 @@ Let’s answer these questions for our dataset by writing some code.
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-## 3.1. Exploring the Dataset
+## 4.1. Exploring the Dataset
 
 The dataset we're working with is stored in a CSV (comma-separated values) file on GitHub. Let's load it into 
 our notebook and store it in a pandas DataFrame called `happy_df`: 
@@ -101,7 +101,7 @@ are more strongly correlated with `happyScore` than others? Data visualization c
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## 3.2. Drawing Heatmaps
+## 4.2. Drawing Heatmaps
 
 One of the best and easiest ways to visualize correlations is through correlographic heatmaps. However, heatmaps 
 can only show how changes in one *numerical value* are correlated with changes in another *numerical value*. 
@@ -226,7 +226,7 @@ with lower income inequality.
 Let's take a closer look at the correlations we've observed between the `happyScore` and the other features by 
 drawing different graphs. 
 
-## 3.3. Drawing Scatter Plots
+## 4.3. Drawing Scatter Plots
 
 **WE ARE HERE**
 
