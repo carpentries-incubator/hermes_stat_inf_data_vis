@@ -1,20 +1,19 @@
 ---
-title: 'Statistical Inference'
+title: 'Data Visualization with Python for Statistical Inference and Storytelling'
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What does statistical inference mean?
-- How is statistical inference used in machine learning tasks?
+- How do you write a lesson using R Markdown and `{sandpaper}`?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain the mathematical concept of statistical inference to humanities researchers
-- Explain one of the use cases of statistical inference in machine learning
+- Explain how to use markdown with the new lesson template
+- Demonstrate how to include pieces of code, figures, and nested challenge blocks
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
