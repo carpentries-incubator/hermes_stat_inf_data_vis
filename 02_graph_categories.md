@@ -49,7 +49,7 @@ visualization section.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## 1. Explore Relationships between two or more Features
+## 2.1. Explore Relationships between two or more Features
 
 **Scatter Plot:** "A scatter plot (aka scatter chart, scatter graph) uses dots to represent values for two different 
 numeric variables. The position of each dot on the horizontal and vertical axis indicates values for an individual 
@@ -86,7 +86,7 @@ Below you can see examples of a scatter plot, a bubble chart, a heatmap and a co
 
 ![](fig/heatmap_and_correlogram.png)
 
-## 2. Compare Different Measures or Trends
+## 2.2. Compare Different Measures or Trends
 
 **Bar Chart:** "A bar chart (aka bar graph, column chart) plots numeric values for levels of a categorical feature 
 as bars. Levels are plotted on one chart axis, and values are plotted on the other axis. Each categorical value 
@@ -106,7 +106,7 @@ Below you can see examples of a bar chart and a line chart.
 
 ![](fig/bar_chart_and_line_chart.png)
 
-## 3. Explore Distributions
+## 2.3. Explore Distributions
 
 **Histogram:** "A histogram is a chart that plots the distribution of a numeric variable’s values as a series 
 of bars. Each bar typically covers a range of numeric values called a bin or class; a bar’s height indicates 
@@ -140,7 +140,7 @@ considered outliers. If there are no outliers, the whisker is the maximum value.
 
 ![](fig/histogram_and_box_plot.png)
 
-## 4. Draw Comparisons
+## 2.4. Draw Comparisons
 
 **Pie Chart:** "A pie chart shows how a total amount is divided between levels of a categorical variable as a 
 circle divided into radial slices. Each categorical value corresponds with a single slice of the circle, and the 
