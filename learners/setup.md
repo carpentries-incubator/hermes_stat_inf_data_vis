@@ -4,9 +4,9 @@ title: Setup
 
 This lesson teaches you how to visualize data using Python. 
 
-## Data Set
+## Dataset
 
-If you wish to save the the data set on your computer, go ahead and download the 
+If you wish to save the the dataset on your computer, go ahead and download the 
 [Income and Happiness Correlation dataset](data/income_happiness_correlation.csv) and save it to your working directory. 
 Otherwise, you can directly load it into your code using the following link:
 
@@ -16,7 +16,7 @@ https://raw.githubusercontent.com/Goli-SF/stat_inf_data_vis/tree/main/episodes/d
 
 <span style="color: red;">The above link should be updated later.</span> 
 
-The data set originates from [Kaggle](https://www.kaggle.com/datasets/levyedgar44/income-and-happiness-correction).
+The dataset originates from [Kaggle](https://www.kaggle.com/datasets/levyedgar44/income-and-happiness-correction).
 
 ## Software Setup
 

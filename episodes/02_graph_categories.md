@@ -4,6 +4,8 @@ teaching: 10
 exercises: 2
 ---
 
+<span style="color: red;">Update teaching time and number of exercises.</span>
+
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - Why is data visualization important in humanities research?
