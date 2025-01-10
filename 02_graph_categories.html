@@ -118,11 +118,11 @@
   Data Visualization for Storytelling and Statistical Inference
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 33%" class="percentage">
-    33%
+<aside class="col-md-12 lesson-progress"><div style="width: 25%" class="percentage">
+    25%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 33%" aria-valuenow="33" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 25%" aria-valuenow="25" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -226,6 +226,9 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#explore-relationships-between-two-or-more-features">1. Explore Relationships between two or more Features</a></li>
+<li><a href="#compare-different-measures-or-trends">2. Compare Different Measures or Trends</a></li>
+<li><a href="#explore-distributions">3. Explore Distributions</a></li>
+<li><a href="#draw-comparisons">4. Draw Comparisons</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -236,6 +239,15 @@
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
         <a href="03_statistical_inference.html">3. Statistical Inference</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="04_python_data_vis_for_inference_and_storytelling.html">4. Data Visualization with Python for Statistical Inference and Storytelling</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -299,7 +311,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Graph Categories</h1>
-        <p>Last updated on 2025-01-09 |
+        <p>Last updated on 2025-01-10 |
 
         <a href="https://github.com/Goli-SF/stat_inf_data_vis/edit/main/episodes/02_graph_categories.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -351,11 +363,9 @@ humanities.</li>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">
-  Answer
-  </h4>
+  <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Data visualization has multiple purposes. It can help you understand
 trends and correlations in a dataset. It can also help you introduce a
@@ -371,6 +381,7 @@ will focus on a few that are useful for statistical inference and data
 storytelling with our specific dataset. However, it’s helpful to know
 the names of these graphs and understand the contexts in which they can
 be applied.</p>
+
 <section><h2 class="section-heading" id="explore-relationships-between-two-or-more-features">1. Explore Relationships between two or more Features<a class="anchor" aria-label="anchor" href="#explore-relationships-between-two-or-more-features"></a></h2>
 <hr class="half-width"><p><strong>Scatter Plot:</strong> “A scatter plot (aka scatter chart,
 scatter graph) uses dots to represent values for two different numeric
@@ -409,21 +420,105 @@ such as the sepal width, petal length, and petal width of an iris,
 showing how closely these attributes are related to each other.</p>
 <p>Below you can see examples of a scatter plot, a bubble chart, a
 heatmap and a correlogram:</p>
-<figure><img src="fig/scatter_plot_and_bubble_chart.png" class="figure mx-auto d-block"></figure><figure><img src="fig/heatmap_and_correlogram.png" class="figure mx-auto d-block"></figure><div id="keypoints1" class="callout keypoints">
+<figure><img src="fig/scatter_plot_and_bubble_chart.png" class="figure mx-auto d-block"></figure><figure><img src="fig/heatmap_and_correlogram.png" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="compare-different-measures-or-trends">2. Compare Different Measures or Trends<a class="anchor" aria-label="anchor" href="#compare-different-measures-or-trends"></a></h2>
+<hr class="half-width"><p><strong>Bar Chart:</strong> “A bar chart (aka bar graph, column
+chart) plots numeric values for levels of a categorical feature as bars.
+Levels are plotted on one chart axis, and values are plotted on the
+other axis. Each categorical value claims one bar, and the length of
+each bar corresponds to the bar’s value. Bars are plotted on a common
+baseline to allow for easy comparison of values.” (<a href="https://www.atlassian.com/data/charts/bar-chart-complete-guide" class="external-link">Atlassian</a>)
+For example, the X-axis could represent the skill levels of employees at
+a company (entry-level, mid-level, and advanced), while the Y-axis shows
+the average annual salary for each group.</p>
+<p><strong>Line Chart:</strong> “A line chart (aka line plot, line
+graph) uses points connected by line segments from left to right to
+demonstrate changes in value. The horizontal axis depicts a continuous
+progression, often that of time, while the vertical axis reports values
+for a metric of interest across that progression.” (<a href="https://www.atlassian.com/data/charts/line-chart-complete-guide" class="external-link">Atlassian</a>)
+For example, the X-axis could represent the years from 2000 to 2024,
+while the Y-axis shows the average salary of advanced employees at two
+different companies over this time period.</p>
+<p>Below you can see examples of a bar chart and a line chart.</p>
+<figure><img src="fig/bar_chart_and_line_chart.png" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="explore-distributions">3. Explore Distributions<a class="anchor" aria-label="anchor" href="#explore-distributions"></a></h2>
+<hr class="half-width"><p><strong>Histogram:</strong> “A histogram is a chart that plots the
+distribution of a numeric variable’s values as a series of bars. Each
+bar typically covers a range of numeric values called a bin or class; a
+bar’s height indicates the frequency of data points with a value within
+the corresponding bin.” (<a href="https://www.atlassian.com/data/charts/histogram-complete-guide" class="external-link">Atlassian</a>)
+For example, the bins on the X-axis could represent salary ranges such
+as ¥30,000 - ¥39,999, ¥40,000 - ¥49,999, and ¥50,000 - ¥59,999, with the
+Y-axis showing the number of Japanese employees in each salary
+range.</p>
+<p><strong>Box Plot:</strong> “Box plots are used to show distributions
+of numeric data values, especially when you want to compare them between
+multiple groups. They are built to provide high-level information at a
+glance, offering general information about a group of data’s symmetry,
+skew, variance, and outliers. It is easy to see where the main bulk of
+the data is, and make that comparison between different groups.” (<a href="https://www.atlassian.com/data/charts/box-plot-complete-guide" class="external-link">Atlassian</a>)</p>
+<p>“The box itself indicates the range in which the middle 50% of all
+values lie. Thus, the lower end of the box is the 1st quartile and the
+upper end is the 3rd quartile. Therefore below Q1 lie 25% of the data
+and above Q3 lie 25% of the data, in the box itself lie 50% of your
+data. Let’s say we look at the age of individuals in a boxplot, and Q1
+is 31 years, then it means that 25% of the participants are younger than
+31 years. If Q3 is 63 years, then it means that 25% of the participants
+are older than 63 years, 50% of the participants are therefore between
+31 and 63 years old. Thus, between Q1 and Q3 is the interquartile
+range.</p>
+<p>In the boxplot, the solid line indicates the median and the dashed
+line indicates the mean. For example, if the median is 42, this means
+that half of the participants are younger than 42 and the other half are
+older than 42. The median thus divides the individuals into two equal
+groups.</p>
+<p>The T-shaped whiskers go to the last point, which is still within 1.5
+times the interquartile range. The T-shaped whisker is either the
+maximum value of your data but at most 1.5 times the interquartile
+range. Any observations that are more than 1.5 interquartile range (IQR)
+below Q1 or more than 1.5 IQR above Q3 are considered outliers. If there
+are no outliers, the whisker is the maximum value.” (<a href="https://datatab.net/tutorial/box-plot" class="external-link">DATAtab</a>)</p>
+<figure><img src="fig/histogram_and_box_plot.png" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="draw-comparisons">4. Draw Comparisons<a class="anchor" aria-label="anchor" href="#draw-comparisons"></a></h2>
+<hr class="half-width"><p><strong>Pie Chart:</strong> “A pie chart shows how a total amount is
+divided between levels of a categorical variable as a circle divided
+into radial slices. Each categorical value corresponds with a single
+slice of the circle, and the size of each slice (both in area and arc
+length) indicates what proportion of the whole each category level
+takes.” (<a href="https://www.atlassian.com/data/charts/pie-chart-complete-guide" class="external-link">Atlassian</a>)
+For example, a pie chart could show the percentage of a company’s budget
+allocated to different task areas.</p>
+<p><strong>Stacked Bar Chart:</strong> “A stacked bar chart is a type of
+bar chart that portrays the compositions and comparisons of several
+variables through time. Stacked charts usually represent a series of
+bars or columns stacked on top of one another. They are widely used to
+effectively portray comparisons of total values across several
+categories.” (<a href="https://www.jaspersoft.com/articles/what-is-a-stacked-chart" class="external-link">Jaspersoft</a>)
+For example, the X-axis of a stacked bar chart could represent bins,
+each covering a 5-year interval, while the Y-axis shows the number of
+employees at a company in each interval. Each bar can be divided into
+groups based on experience level, with different colors representing
+each group.</p>
+<figure><img src="fig/pie_chart_and_stacked_bar_chart.png" class="figure mx-auto d-block"></figure><p>There are many other types of graphs beyond the ones introduced here,
+such as area charts, tree maps, funnel charts, violin plots, and more.
+To explore these charts and graphs further, visit the websites <a href="https://www.atlassian.com/data/charts/essential-chart-types-for-data-visualization" class="external-link">Atlassian</a>
+or <a href="https://www.storytellingwithdata.com/chart-guide" class="external-link">Storytelling
+with Data</a>.</p>
+<p>In the next section, we’ll take a closer look at the correlographic
+heatmap, the scatter plot, and the bubble chart. We’ll learn how to
+create them in Python and explore how they can contribute to statistical
+inference and data storytelling. To start, let’s first introduce the
+concept of statistical inference.</p>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <div class="callout-inner">
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
-<ul><li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<ul><li>Scatter plots, bubble charts, heatmaps and correlograms for
+exploring relationships between two or more features</li>
+<li>Bar charts and line charts for comparing different measures or
+trends</li>
+<li>Histograms and box plots for exploring distributions</li>
+<li>Pie charts and stacked bar charts for drawing comparisons</li>
 </ul></div>
 </div>
 </div>
@@ -489,8 +584,8 @@ any links that you are not going to use.
   "url": "https://Goli-SF.github.io/stat_inf_data_vis/02_graph_categories.html",
   "identifier": "https://Goli-SF.github.io/stat_inf_data_vis/02_graph_categories.html",
   "dateCreated": "2025-01-30",
-  "dateModified": "2025-01-09",
-  "datePublished": "2025-01-09"
+  "dateModified": "2025-01-10",
+  "datePublished": "2025-01-10"
 }
 
   </script><script>
