@@ -5,7 +5,7 @@ exercises: 2
 ---
 <span style="color: red;">Update teaching time and number of exercises.</span>
 
-<span style="color: red;">Mention that what we are doing in this episode is storytelling + inference.</span>
+<span style="color: red;">Important: Mention that what we are doing in this episode is storytelling + inference.</span>
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
