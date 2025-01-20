@@ -2,21 +2,34 @@
 title: Setup
 ---
 
-This lesson teaches you how to visualize data using Python. 
+In this lesson, you'll explore the different types of graphs and 
+their use cases. You'll then dive into the concept of statistical 
+inference. Next, you'll get hands-on with Python coding to analyze 
+the happiness and income dataset provided below. Finally, you'll 
+use the graphs you've created to make informed estimates about 
+countries not included in the dataset.
+
+:::::::::::::::: callout
+### What background knowledge do you need for this lesson?
+
+1. Basic acquaintance with Python
+2. Basic mathematical background
+3. Curiosity to learn more about Python programming, statistics and data storytelling
+::::::::::::::::::
 
 ## Dataset
 
+The dataset we are working with in this lesson originates from [Kaggle](https://www.kaggle.com/datasets/levyedgar44/income-and-happiness-correction). 
 If you wish to save the the dataset on your computer, go ahead and download the 
 [Income and Happiness Correlation dataset](data/income_happiness_correlation.csv) and save it to your working directory. 
-Otherwise, you can directly load it into your code using the following link:
+Otherwise, you can directly load it into your code later using the following link:
 
 ```
 https://raw.githubusercontent.com/Goli-SF/stat_inf_data_vis/tree/main/episodes/data/income_happiness_correlation.csv
 ```
 
-<span style="color: red;">The above link should be updated later.</span> 
+<span style="color: red;">The above link should be updated later, when the lesson is pushed to the incubator.</span> 
 
-The dataset originates from [Kaggle](https://www.kaggle.com/datasets/levyedgar44/income-and-happiness-correction).
 
 ## Software Setup
 
@@ -24,10 +37,14 @@ The dataset originates from [Kaggle](https://www.kaggle.com/datasets/levyedgar44
 
 ### Python and Jupyter Notebook/Google Colab
 
-To do the exercises in this lesson, you need an IDE (Integrated Development Environment). We recommend you use Jupyter Notebook or an equivalent 
-(such as [Google Colab](https://colab.google/)). 
+To do the exercises in this lesson, you need an IDE (Integrated Development Environment). We recommend you use 
+Jupyter Notebook or cloud-based equivalent such as [Google Colab](https://colab.google/). 
 
-To install Jupyter Notebook and Python on your computer together, we recommend using [Anaconda](https://www.anaconda.com/download/success)
+If you're using Google Colab, you don't need any installation. Just create a Google account - if you don't have one
+already -, create a new Colab notebook and start coding. 
+
+Otherwise, to install Jupyter Notebook and Python on your computer together, we recommend using 
+[Anaconda](https://www.anaconda.com/download/success).
 To do so, click on your operating system from the list below and follow the instructions. 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -68,12 +85,12 @@ This [video tutorial](https://www.youtube.com/watch?v=TcSAln46u9U) can help you 
 2. Download the Anaconda Installer with Python 3 for Linux.
 (The installation requires using the shell. If you aren't comfortable doing the installation yourself stop here and request help at the workshop.)
 3. Open a terminal window and navigate to the directory where the executable is downloaded (e.g., `cd ~/Downloads`).
-4. Type
-```bash Anaconda3-```
-and then press `Tab` to autocomplete the full file name. The name of file you just downloaded should appear.
-5. Press <kbd>Enter</kbd> (or <kbd>Return</kbd> depending on your keyboard). You will follow the text-only prompts. To move through the text, 
-press <kbd>Spacebar</kbd>. Type `yes` and press enter to approve the license. Press <kbd>Enter</kbd> (or <kbd>Return</kbd>) to approve the default location 
-for the files. Type `yes` and press <kbd>Enter</kbd> (or <kbd>Return</kbd>) to prepend Anaconda to your `PATH` (this makes the Anaconda distribution the default Python).
+4. Type `bash Anaconda3-` and then press <kbd>Tab</kbd> to autocomplete the full file name. The name of file you just 
+downloaded should appear.
+5. Press <kbd>Enter</kbd> (or <kbd>Return</kbd> depending on your keyboard). You will follow the text-only prompts. 
+To move through the text, press <kbd>Spacebar</kbd>. Type `yes` and press <kbd>Enter</kbd> (or <kbd>Return</kbd>) 
+to approve the license. Press <kbd>Enter</kbd> (or <kbd>Return</kbd>) to approve the default location for the files. 
+Type `yes` and press <kbd>Enter</kbd> (or <kbd>Return</kbd>) to prepend Anaconda to your `PATH` (this makes the Anaconda distribution the default Python).
 6. Close the terminal window.
 
 ::::::::::::::::::::::::
