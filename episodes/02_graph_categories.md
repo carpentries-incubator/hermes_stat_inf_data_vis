@@ -1,10 +1,9 @@
 ---
 title: 'Graph Categories'
-teaching: 10
-exercises: 2
+teaching: 15
+exercises: 0
 ---
 
-<span style="color: red;">Update teaching time and number of exercises.</span>
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
@@ -20,6 +19,14 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+This episode is more meant for self study. You don't need to go into extensive detail about the content of this 
+episode. Instead, focus on reviewing the graphs with the learners and ask if they are already familiar with 
+them and their use cases. The most important graphs to highlight—those that will also be featured in the 
+visualization section of this lesson—are scatter plots, bubble charts, and correlograms. Place greater emphasis 
+on these and prepare the learners to create them in the visualization section. 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: challenge 
 
 ## Question
@@ -34,22 +41,13 @@ Data visualization has multiple purposes. It can help you understand trends and 
 It can also help you introduce a dataset to others in scientific texts or in data storytelling.
 
 :::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 Most graphs used for data visualization fall into one of the following four general categories, based on their function. 
 In this lesson, we won’t cover how to create all of these graphs in Python, but will focus on a few that are 
 useful for statistical inference and data storytelling with our specific dataset. However, 
 it's helpful to know the names of these graphs and understand the contexts in which they can be applied.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-This episode is more meant for self study. You don't need to go into extensive detail about the content of this episode. Instead, focus on reviewing the graphs 
-with the learners and ask if they are already familiar with them and their use cases. The most important graphs to 
-highlight—those that will also be featured in the visualization section of this lesson—are scatter plots, 
-bubble charts, and correlograms. Place greater emphasis on these and prepare the learners to create them in the 
-visualization section. 
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## 2.1. Explore Relationships between two or more Features
 
