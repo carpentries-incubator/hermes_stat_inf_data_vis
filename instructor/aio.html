@@ -403,7 +403,7 @@ statistical inference for data storytelling.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>To warm up, conduct a brief brainstorming session to elicit potential
 answers to the questions above. Write the answers on the board and
@@ -517,7 +517,7 @@ humanities.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>This episode is more meant for self study. You don’t need to go into
 extensive detail about the content of this episode. Instead, focus on
@@ -547,7 +547,7 @@ to create them in the visualization section.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Data visualization has multiple purposes. It can help you understand
 trends and correlations in a dataset. It can also help you introduce a
@@ -931,17 +931,13 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04_python_data_vis_for_inference_and_storytelling"><p>Content from <a href="04_python_data_vis_for_inference_and_storytelling.html">Data Visualization with Python for Statistical Inference and Storytelling</a></p>
 <hr>
-<p>Last updated on 2025-01-15 |
+<p>Last updated on 2025-01-21 |
 
         <a href="https://github.com/Goli-SF/stat_inf_data_vis/edit/main/episodes/04_python_data_vis_for_inference_and_storytelling.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
-<p><span style="color: red;">Update teaching time and number of
-exercises.</span></p>
-<p><span style="color: red;">Important: Mention that what we are doing
-in this episode is storytelling + inference.</span></p>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -952,9 +948,10 @@ in this episode is storytelling + inference.</span></p>
 <ul>
 <li>How can you create scatter plots, bubble charts, and correlograms
 with Python?</li>
-<li>When are these graphs useful for inferring information from
-data?</li>
-<li>How are these visualizations valuable for humanists?</li>
+<li>How can these graphs be implemented in data storytelling?</li>
+<li>How can you infer statistical information from a dataset, using
+these visualizations?</li>
+<li>How can these visualizations contribute to humanists research?</li>
 </ul>
 </div>
 </div>
@@ -964,14 +961,36 @@ data?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Create scatter plots, bubble charts and correlograms in Python,
-using the Seaborn library</li>
-<li>Understand the process of creating these graphs to infer information
-from a dataset</li>
-<li>Comprehend how these graphs can be used to infer insights from
-humanities data and for data storytelling</li>
+<li>Creating scatter plots, bubble charts and correlograms in Python,
+using the Seaborn library.</li>
+<li>Implementing data visualization for exploratory analysis of a
+concrete dataset and telling a story based on the trends that it
+reveals.</li>
+<li>Using data visualization to infer information from a concrete
+dataset.</li>
+<li>Reflecting on the use cases of data visualization in humanities
+research.</li>
 </ul>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
+<p>This episode is the heart of the present lesson. Manage your teaching
+time carefully to have enough space for hands-on coding and answering
+questions in this episode. Make sure that all learners have successfully
+set up Jupyter Notebook on their computers or have access to Google
+Colab. Encourage the learners to code along with you. You can stop
+coding at certain points and elicit the next line of code from the
+learners. Group work is highly encourages, especially while doing the
+final exercise.</p>
 </div>
 </div>
 </div>
@@ -979,13 +998,16 @@ humanities data and for data storytelling</li>
 <p>In the previous episodes, we explored ten types of graphs and their
 use cases, as well as the concepts of correlation and regression in the
 context of inferential statistics. Now, it’s time to put this knowledge
-into practice! In this episode, we’ll work with the <em>Income and
-Happiness Correlation dataset</em> from Kaggle (see the Setup episode),
-which consists of 111 data points. We’ll visualize this dataset and
-learn how to perform inferential statistical analysis on it.</p>
-<div id="note" class="callout discussion">
+into practice!</p>
+<p>In this episode, we’ll work with the <em>Income and Happiness
+Correlation dataset</em> from Kaggle (see the Setup episode), which
+consists of 111 data points. We will explore the dataset through various
+graphs and use them to craft a narrative around the data. In the final
+exercise, you will enhance this narrative by inferring information that
+is not yet present in the dataset.</p>
+<div id="note" class="callout">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="note" class="callout-inner">
 <h3 class="callout-title">Note</h3>
@@ -1009,7 +1031,7 @@ code.</p>
 <hr class="half-width">
 <p>The dataset we’re working with is stored in a CSV (comma-separated
 values) file on GitHub. Let’s load it into our notebook and store it in
-a pandas DataFrame called <code>happy_df</code>:</p>
+a pandas DataFrame named <code>happy_df</code>:</p>
 <pre><code>import pandas as pd
 
 # path to the dataset:
@@ -1037,23 +1059,19 @@ structure of <code>happy_df</code>:</p>
 <div id="question" class="callout-inner">
 <h3 class="callout-title">Question</h3>
 <div class="callout-content">
-<p>Now that you know the dataset better, you can answer the question:
-what information can be <em>inferred</em> from this dataset? Which
-column contains values that could be dependent on other features, and
-thereby correlates with them? Would it be possible to predict the values
-of this column, given the values of one or more other columns in the
-dataset?</p>
+<p>Which column contains values that could be dependent on other
+features, and thereby correlates with them? Would it be possible to
+predict the values of this column, given the values of one or more other
+columns in the dataset?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">
-  Answer
-  </h4>
+  <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Intuitively, one might assume that the <code>happyScore</code> column
 contains values that could be predicted based on the other features. So,
@@ -1115,9 +1133,13 @@ correlation coefficients are calculated using the <a href="https://www.youtube.c
 relationship between two variables. It has a value between -1 to +1,
 with a value of -1 meaning a total negative linear correlation, 0 being
 no correlation, and +1 meaning a total positive correlation.” (<a href="https://www.sciencedirect.com/topics/computer-science/pearson-correlation#:~:text=content%20were%20calculated.-,The%20Pearson%20correlation%20measures%20the%20strength%20of%20the%20linear%20relationship,meaning%20a%20total%20positive%20correlation" class="external-link">ScienceDirect</a>)</p>
-<div class="section level4">
-<h4 id="how-to-read-and-interpret-the-heatmap">How to read and interpret the heatmap:<a class="anchor" aria-label="anchor" href="#how-to-read-and-interpret-the-heatmap"></a>
-</h4>
+<div id="how-to-read-and-interpret-the-heatmap" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="how-to-read-and-interpret-the-heatmap" class="callout-inner">
+<h3 class="callout-title">How to read and interpret the heatmap:</h3>
+<div class="callout-content">
 <ul>
 <li>Darker red colors, accompanied by values closer to +1, indicate
 stronger positive correlations. This means that as one value
@@ -1128,6 +1150,9 @@ stronger negative correlations. This means that as one value
 <em>increases</em> at a certain rate, the other <em>decreases</em> at a
 similar rate.</li>
 </ul>
+</div>
+</div>
+</div>
 <div id="question-1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1142,19 +1167,18 @@ similar rate.</li>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2">
-  Answer
-  </h4>
+  <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>Each feature is most strongly correlated with itself, with a
 correlation coefficient of +1.</li>
 <li>Values derived from the same feature demonstrate a high correlation.
-For example, the correlation coefficient between avg_satisfaction and
-adjusted_satisfaction is +0.98, because both stem from the satisfaction
-degree. The same is true about avg_income and median_income with the
+For example, the correlation coefficient between
+<code>avg_satisfaction</code> and <code>adjusted_satisfaction</code> is
++0.98, because both stem from the satisfaction degree. The same is true
+about <code>avg_income</code> and <code>median_income</code> with the
 correlation coefficient being +1.</li>
 </ul>
 </div>
@@ -1209,10 +1233,9 @@ with lower income inequality.</li>
 </div>
 </div>
 </div>
-<p>Let’s take a closer look at the correlations we’ve observed between
-the <code>happyScore</code> and the other features by drawing different
-graphs.</p>
-</div>
+<p>Let’s now take a closer look at the correlations we’ve observed
+between the <code>happyScore</code> and the other features by drawing
+different graphs.</p>
 </section><section><h2 class="section-heading" id="drawing-scatter-plots">4.3. Drawing Scatter Plots<a class="anchor" aria-label="anchor" href="#drawing-scatter-plots"></a>
 </h2>
 <hr class="half-width">
@@ -1248,9 +1271,10 @@ plt.title('correlation between GDP and happyScore')
 
 # diyplaying the graph:
 plt.show()</code></pre>
-<figure><img src="../fig/output_07.png" class="figure mx-auto d-block"></figure><div id="fun-fact" class="callout discussion">
+<figure><img src="../fig/output_07.png" class="figure mx-auto d-block"></figure><p><strong>WE ARE HERE!</strong></p>
+<div id="fun-fact" class="callout testimonial">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="heart"></i>
 </div>
 <div id="fun-fact" class="callout-inner">
 <h3 class="callout-title">Fun Fact</h3>
@@ -1277,7 +1301,8 @@ sns.regplot(data=happy_df, x='GDP', y='happyScore', scatter=False, color='red', 
 
 plt.title('GDP vs. happyScore with regression line')
 plt.show()</code></pre>
-<figure><img src="../fig/output_08.png" class="figure mx-auto d-block"></figure>
+<figure><img src="../fig/output_08.png" class="figure mx-auto d-block"></figure><p><strong>you can do the same for infering data: draw the line and
+estimate the values that you don’t have yet.</strong></p>
 </div>
 </div>
 </div>
@@ -1414,11 +1439,9 @@ and GDP? Isn’t this a contradiction?!</p>
 <div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3">
-  Answer
-  </h4>
+  <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Yes and no! Remember, we excluded categorical data, such as region
 and country names, from <code>happy_df</code> to create the heatmap. By
