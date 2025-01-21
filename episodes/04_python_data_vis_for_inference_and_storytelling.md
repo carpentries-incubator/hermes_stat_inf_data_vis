@@ -1,36 +1,46 @@
 ---
 title: 'Data Visualization with Python for Statistical Inference and Storytelling'
-teaching: 10
-exercises: 2
+teaching: 45
+exercises: 15
 ---
-<span style="color: red;">Update teaching time and number of exercises.</span>
 
-<span style="color: red;">Important: Mention that what we are doing in this episode is storytelling + inference.</span>
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - How can you create scatter plots, bubble charts, and correlograms with Python?
-- When are these graphs useful for inferring information from data?
-- How are these visualizations valuable for humanists?
+- How can these graphs be implemented in data storytelling? 
+- How can you infer statistical information from a dataset, using these visualizations?
+- How can these visualizations contribute to humanists research?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Create scatter plots, bubble charts and correlograms in Python, using the Seaborn library
-- Understand the process of creating these graphs to infer information from a dataset
-- Comprehend how these graphs can be used to infer insights from humanities data and for data storytelling
+- Creating scatter plots, bubble charts and correlograms in Python, using the Seaborn library.
+- Implementing data visualization for exploratory analysis of a concrete dataset and telling a story 
+based on the trends that it reveals. 
+- Using data visualization to infer information from a concrete dataset. 
+- Reflecting on the use cases of data visualization in humanities research. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+This episode is the heart of the present lesson. Manage your teaching time carefully to have enough space for 
+hands-on coding and answering questions in this episode. Make sure that all learners have successfully 
+set up Jupyter Notebook on their computers or have access to Google Colab. Encourage the learners to code along with 
+you. You can stop coding at certain points and elicit the next line of code from the learners. Group work is highly
+encourages, especially while doing the final exercise. 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 In the previous episodes, we explored ten types of graphs and their use cases, as well as the concepts of correlation 
-and regression in the context of inferential statistics. Now, it’s time to put this knowledge into practice! 
+and regression in the context of inferential statistics. Now, it’s time to put this knowledge into practice!
+
 In this episode, we’ll work with the *Income and Happiness Correlation dataset* from Kaggle (see the Setup episode), 
-which consists of 111 data points. We’ll visualize this dataset and learn how to perform inferential statistical 
-analysis on it.
+which consists of 111 data points. We will explore the dataset through various graphs and use them to craft a 
+narrative around the data. In the final exercise, you will enhance this narrative by inferring information 
+that is not yet present in the dataset.
 
-::::::::::::::::::::::::::::::::::::::: discussion
-
+::::::::::::::::::::::::::::::::::::::: callout
 ### Note
 
 Before visualizing any dataset, it’s important to answer the following questions:
@@ -41,14 +51,13 @@ Before visualizing any dataset, it’s important to answer the following questio
 And which type of graph best represents the information I'm looking for?
 
 Let’s answer these questions for our dataset by writing some code.
-
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ## 4.1. Exploring the Dataset
 
 The dataset we're working with is stored in a CSV (comma-separated values) file on GitHub. Let's load it into 
-our notebook and store it in a pandas DataFrame called `happy_df`: 
+our notebook and store it in a pandas DataFrame named `happy_df`: 
 
 ```
 import pandas as pd
@@ -76,6 +85,7 @@ Run the following line of code to gain more information about the structure of `
 ```
 # displaying information about the DataFrame:
 happy_df.info()
+
 ```
 
 ![](fig/output_02.png)
@@ -84,8 +94,7 @@ happy_df.info()
 
 ## Question
 
-Now that you know the dataset better, you can answer the question: what information can be *inferred* from 
-this dataset? Which column contains values that could be dependent on other features, and thereby correlates 
+Which column contains values that could be dependent on other features, and thereby correlates 
 with them? Would it be possible to predict the values of this column, given the values of one or more other 
 columns in the dataset?
 
@@ -158,12 +167,15 @@ in `corr= numerical_df.corr(method='pearson')`.
 between -1 to +1, with a value of -1 meaning a total negative linear correlation, 0 being no correlation, and +1 
 meaning a total positive correlation." ([ScienceDirect](https://www.sciencedirect.com/topics/computer-science/pearson-correlation#:~:text=content%20were%20calculated.-,The%20Pearson%20correlation%20measures%20the%20strength%20of%20the%20linear%20relationship,meaning%20a%20total%20positive%20correlation))
 
+
+::::::::::::::::::::::::::::::::::::::: discussion
 #### How to read and interpret the heatmap:
 
 - Darker red colors, accompanied by values closer to +1, indicate stronger positive correlations. 
 This means that as one value *increases* at a certain rate, the other *increases* at a similar rate.
 - Darker blue colors, accompanied by values closer to -1, indicate stronger negative correlations. This means 
 that as one value *increases* at a certain rate, the other *decreases* at a similar rate.
+:::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -177,8 +189,8 @@ What patterns does the heatmap above reveal?
  
 - Each feature is most strongly correlated with itself, with a correlation coefficient of +1.
 - Values derived from the same feature demonstrate a high correlation. For example, the correlation 
-coefficient between avg_satisfaction and adjusted_satisfaction is +0.98, because both stem from the 
-satisfaction degree. The same is true about avg_income and median_income with the correlation coefficient being +1.
+coefficient between `avg_satisfaction` and `adjusted_satisfaction` is +0.98, because both stem from the 
+satisfaction degree. The same is true about `avg_income` and `median_income` with the correlation coefficient being +1.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -226,7 +238,7 @@ with lower income inequality.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Let's take a closer look at the correlations we've observed between the `happyScore` and the other features by 
+Let's now take a closer look at the correlations we've observed between the `happyScore` and the other features by 
 drawing different graphs. 
 
 ## 4.3. Drawing Scatter Plots
@@ -266,7 +278,10 @@ plt.show()
 
 ![](fig/output_07.png)
 
-::::::::::::::::::::::::::::::::::::::: discussion
+**WE ARE HERE!**
+
+::::::::::::::::::::::::::::::::::::::: testimonial
+
 
 ### Fun Fact
 
@@ -294,6 +309,8 @@ plt.show()
 ```
 
 ![](fig/output_08.png)
+
+**you can do the same for infering data: draw the line and estimate the values that you don't have yet.**
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
