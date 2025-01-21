@@ -1,10 +1,8 @@
 ---
 title: 'Conclusion'
 teaching: 10
-exercises: 2
+exercises: 
 ---
-
-<span style="color: red;">Update teaching time and number of exercises.</span>
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
@@ -15,8 +13,8 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Review the possibilities of data visualization for statistical inference and storytelling in humanities research
-- Embark on new educational journeys based on the content learned
+- Review the possibilities of data visualization for statistical inference and storytelling in humanities research.
+- Embark on new educational journeys based on the content learned.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -26,7 +24,7 @@ visualization aren’t as precise as those derived through mathematical modeling
 effective data storytelling.
 
 In this lesson, you explored the concepts of statistical inference and regression through data 
-visualization—two foundational processes in machine learning models. While we didn’t delve deeply into the 
+visualization — two foundational processes in machine learning models. While we didn’t delve deeply into the 
 mathematical details of these concepts, you learned their underlying logic and applied it by predicting the 
 `happyScore` for two countries not included in the dataset. Additionally, you gained experience in visualizing 
 scatter plots, bubble charts, and heatmaps using Python’s Seaborn library.
@@ -49,8 +47,8 @@ valuable next steps.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Explore the possibilities of data visualization for statistical inference and storytelling
-- figure out the next learning steps
+- Explore the possibilities of data visualization for statistical inference and storytelling.
+- Figure out the next learning steps.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
