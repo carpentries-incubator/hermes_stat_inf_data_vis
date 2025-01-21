@@ -55,9 +55,9 @@ and predict dataset values through visualization techniques.
 * Next, you'll explore statistical inference and linear regression, which will help you understand correlations 
 and make predictions based on datasets. These concepts also provide foundational insights into how machine 
 learning models work. 
-* Finally, you'll learn how to use visualization techniques to identify patterns within a dataset and extract 
-statistical insights, bringing together the concepts from the previous sections and engaging in hands-on 
-data visualization in Python.  
+* Finally, you'll learn how to use visualization techniques in an exploratory analysis and storytelling process 
+to identify patterns within a dataset and extract statistical insights, bringing together the concepts from 
+the previous sections and engaging in hands-on data visualization in Python.  
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
