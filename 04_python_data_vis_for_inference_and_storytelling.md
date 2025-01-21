@@ -59,6 +59,8 @@ Let’s answer these questions for our dataset by writing some code.
 The dataset we're working with is stored in a CSV (comma-separated values) file on GitHub. Let's load it into 
 our notebook and store it in a pandas DataFrame named `happy_df`: 
 
+<span style="color: red;">The url below should be updated later, when the lesson is pushed to the incubator.</span> 
+
 ```
 import pandas as pd
 
