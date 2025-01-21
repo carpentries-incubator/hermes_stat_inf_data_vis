@@ -41,7 +41,7 @@ To do the exercises in this lesson, you need an IDE (Integrated Development Envi
 Jupyter Notebook or cloud-based equivalent such as [Google Colab](https://colab.google/). 
 
 If you're using Google Colab, you don't need any installation. Just create a Google account - if you don't have one
-already -, create a new Colab notebook and start coding. 
+already -, create a new Colab Notebook by clicking on <kbd>New Notebook</kbd> in the above link, and start coding. 
 
 Otherwise, to install Jupyter Notebook and Python on your computer together, we recommend using 
 [Anaconda](https://www.anaconda.com/download/success).
