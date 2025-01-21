@@ -440,7 +440,7 @@ columns in the dataset?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Intuitively, one might assume that the <code>happyScore</code> column
 contains values that could be predicted based on the other features. So,
@@ -534,7 +534,7 @@ similar rate.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul><li>Each feature is most strongly correlated with itself, with a
 correlation coefficient of +1.</li>
@@ -630,8 +630,7 @@ plt.title('correlation between GDP and happyScore')
 
 # diyplaying the graph:
 plt.show()</code></pre>
-<figure><img src="fig/output_07.png" class="figure mx-auto d-block"></figure><p><strong>WE ARE HERE!</strong></p>
-<div id="fun-fact" class="callout testimonial">
+<figure><img src="fig/output_07.png" class="figure mx-auto d-block"></figure><div id="fun-fact" class="callout testimonial">
 <div class="callout-square">
 <i class="callout-icon" data-feather="heart"></i>
 </div>
@@ -660,8 +659,13 @@ sns.regplot(data=happy_df, x='GDP', y='happyScore', scatter=False, color='red', 
 
 plt.title('GDP vs. happyScore with regression line')
 plt.show()</code></pre>
-<figure><img src="fig/output_08.png" class="figure mx-auto d-block"></figure><p><strong>you can do the same for infering data: draw the line and
-estimate the values that you don’t have yet.</strong></p>
+<figure><img src="fig/output_08.png" class="figure mx-auto d-block"></figure><p>In this lesson, you will not learn the exact formula for calculating
+the position of the regression line or making precise predictions based
+on it. However, visualizing the regression line remains a valuable tool
+in data storytelling. It allows you to make approximate guesses about
+certain values not present in the dataset by inferring them from the
+available data. You will have the opportunity to practice this skill at
+the end of this episode.</p>
 </div>
 </div>
 </div>
@@ -698,18 +702,19 @@ plt.show()</code></pre>
 <h3 class="callout-title">Insight</h3>
 <div class="callout-content">
 <p>Interesting! Here are some observable trends in the graph:</p>
-<ul><li>Sub-Saharan African countries have the lowest GDPs, whereas Western
-European and North American countries have the highest. However, there
-are countries in the former region in which the <code>happyScore</code>
-is as high as in some Western European countries, regardless of their
-very low GDP.</li>
-<li>GDP is highest in Western European countries. However,
+<ul><li>Sub-Saharan African countries have the lowest <code>GDP</code>s,
+whereas Western European and North American countries have the highest.
+However, there are countries in the former region in which the
+<code>happyScore</code> is as high as in some Western European
+countries, regardless of their very low <code>GDP</code>.</li>
+<li>
+<code>GDP</code> is highest in Western European countries. However,
 <code>happyScore</code> in a considering number of them is similar to
-countries in Latin American and Caribbean, even though GDP in these
-latter regions is lower.</li>
+Latin American countries and Caribbean, even though <code>GDP</code> in
+these latter regions is lower.</li>
 <li>The variation in happiness levels within the same region is greatest
 among Western European countries, although they all fall into the
-highest GDP category.</li>
+highest <code>GDP</code> category.</li>
 </ul><p>Take a closer look at the graph and see if you can identify any
 additional trends.</p>
 </div>
@@ -733,7 +738,14 @@ plt.legend(fontsize='9', bbox_to_anchor=(1.05, 1), loc='upper left')
 
 plt.title('correlation between GDP, region, avg_income and happyScore')
 plt.show()</code></pre>
-<figure><img src="fig/output_10.png" class="figure mx-auto d-block"></figure><p>Here, another interesting trend emerges: average income only begins
+<figure><img src="fig/output_10.png" class="figure mx-auto d-block"></figure><div id="insight-2" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="insight-2" class="callout-inner">
+<h3 class="callout-title">Insight</h3>
+<div class="callout-content">
+<p>Here, another interesting trend emerges: average income only begins
 to increase significantly once GDP exceeds a value of 1.</p>
 <p>What additional insights can you derive from this graph? Consider
 exploring patterns such as which regions have high
@@ -741,6 +753,9 @@ exploring patterns such as which regions have high
 might also observe whether certain regions exhibit consistent patterns
 between <code>avg_income</code> and <code>happyScore</code> despite
 differences in <code>GDP</code>.</p>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="diving-deeper-into-details">4.5. Diving Deeper into Details<a class="anchor" aria-label="anchor" href="#diving-deeper-into-details"></a></h2>
 <hr class="half-width"><p>As a final step in our exploration, let’s focus on the countries in
 Sub-Saharan Africa to identify which ones have a low <code>GDP</code>
@@ -771,21 +786,19 @@ for i in range(len(african_df)):
 plt.legend(fontsize='9', bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.title('correlation between GDP, avg_income and happyScore in Sub-Saharan Africa')
 plt.show()</code></pre>
-<figure><img src="fig/output_12.png" class="figure mx-auto d-block"></figure><p>Let’s examine this scatter plot and compare it with the heatmap we
-created earlier:</p>
-<p>The scatter plot reveals that some economically poor countries in
-Sub-Saharan Africa, such as Mozambique and Liberia, have a low
-<code>GDP</code> and <code>avg-income</code> but still demonstrate a
-high <code>happyScore</code>.</p>
-<div id="question-2" class="callout challenge">
+<figure><img src="fig/output_12.png" class="figure mx-auto d-block"></figure><div id="question-2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="question-2" class="callout-inner">
 <h3 class="callout-title">Question</h3>
 <div class="callout-content">
-<p>But didn’t the heatmap show a positive correlation between happiness
-and GDP? Isn’t this a contradiction?!</p>
+<p>The scatter plot reveals that some economically poor countries in
+Sub-Saharan Africa, such as Mozambique and Liberia, have a low
+<code>GDP</code> and <code>avg_income</code> but still demonstrate a
+high <code>happyScore</code>. But didn’t the heatmap that we created
+earlier show a positive correlation between happiness and GDP? Isn’t
+this a contradiction?!</p>
 </div>
 </div>
 </div>
@@ -794,15 +807,16 @@ and GDP? Isn’t this a contradiction?!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Yes and no! Remember, we excluded categorical data, such as region
 and country names, from <code>happy_df</code> to create the heatmap. By
 analyzing only numerical values, we observed a generally positive
 correlation between <code>GDP</code> and <code>happyScore</code>.
-However, the scatter plots and bubble chart suggest that cultural
-factors specific to each country significantly influence happiness. This
-impact is especially visible among Sub-Saharan African countries.</p>
+However, the scatter plots and bubble chart suggest that maybe cultural
+factors specific to each country are significantly correlated with
+happiness. This impact is especially visible among Sub-Saharan African
+countries.</p>
 <p>Therefore, if we want to draw an inferential conclusion from our
 observations, it would be this: happiness appears to be influenced by a
 combination of GDP, income, and cultural factors. To predict a country’s
@@ -815,17 +829,17 @@ country’s average income level.</p>
 </div>
 </section><section><h2 class="section-heading" id="exercise">4.6. Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a></h2>
 <hr class="half-width"><p>Take two countries that are not listed in the DataFrame, for example
-Iran and Turkey. Given the correlations that we have so far inferred
-from the dataset, try to predict how high their <code>happyScore</code>
-is. To do so, you need the following information:</p>
+Iran and Turkey. Given the correlations that we have so far detected in
+the dataset, try to predict how high their <code>happyScore</code> is.
+To do so, you need the following information:</p>
 <ul><li>Which region do these countries belong to? Which countries in
 <code>happy_df</code>are culturally more similar to Iran and
 Turkey?</li>
 <li>How high are <code>GDP</code> and <code>avg_income</code> in these
 countries?</li>
 </ul><p>look at the scatter plot with a regression line and the bubble chart
-and try to predict where these two countries, Iran and Turkey, would be
-placed on the chart.</p>
+and try to predict where the <code>happy_score</code>s of<br>
+these two countries, Iran and Turkey, would be placed on the chart.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -833,10 +847,12 @@ placed on the chart.</p>
 <div class="callout-inner">
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
-<ul><li>Draw scatter plots, correlograms and bubble chart to infer
-information from a given dataset</li>
-<li>Process of storytelling with data, using visualization to create a
-narrative and predict values</li>
+<ul><li>Draw scatter plots, bubble charts and correlograms in Python, using
+the Seaborn library.</li>
+<li>Implement data visualization for exploratory analysis of a concrete
+dataset and telling a story based on the trends that it reveals.</li>
+<li>Use data visualization to infer information from a concrete
+dataset.</li>
 </ul></div>
 </div>
 </div>
