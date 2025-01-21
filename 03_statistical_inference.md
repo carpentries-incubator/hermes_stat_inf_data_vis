@@ -1,23 +1,40 @@
 ---
 title: 'Statistical Inference'
 teaching: 10
-exercises: 2
+exercises: 0
 ---
-<span style="color: red;">Update teaching time and number of exercises.</span>
+
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What does statistical inference mean?
-- How is statistical inference used in machine learning tasks?
+- What other mathematical concepts are needed to understand statistical inference better?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain the mathematical concept of statistical inference to humanities researchers
-- Explain one of the use cases of statistical inference in machine learning
+- Explain the mathematical concept of statistical inference to humanities students and researchers.
+- Explain the difference between descriptive and inferential statistics, correlation and causation. 
+- Explain the meaning of regression. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+There is a lot of text in this episode, which is meant for self study. Make sure to have read the text yourself
+before the workshop and explain the main concepts to the learners. Put emphasis on the keywords: descriptive and 
+inferential statistics, correlation, regression and causation. Let the learners know that they should keep the 
+information from this episode in mind before moving on to the next one. In the next episode, they are going to 
+learn how to put this knowledge to use for analyzing data and predicting values with data visualization. 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+This episode demonstrates that data visualization is about more than just storytelling. A common misconception is 
+that humanities researchers and scholars find it difficult to grasp statistical concepts and, therefore, the 
+mathematics behind machine learning and AI. In this episode, you'll explore the concept of statistical inference, 
+with data visualization serving as a helpful learning tool as you will see in the next episode. This episode will 
+show you how, besides describing your research data, you can also use visualization for predicting missing values 
+and coming up with hypotheses for further research. 
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -89,7 +106,7 @@ lifespan is considered the *dependent* variable, as its value depends on the oth
 in turn, are considered *independent* variables, as their values do not depend on lifespan. This process of 
 numerically relating a dependent variable to independent variables is called **regression**.
 
-::::::::::::::::::::::::::::::::::::::: discussion
+::::::::::::::::::::::::::::::::::::::: callout
 
 ### Note
 
@@ -106,9 +123,8 @@ even if they don’t explain the underlying reasons for these trends.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- The concept of statistical inference
-- The concept of correlation
-- The concepts of dependant and independant variables
-- The concept of regression
+- The concept of statistical inference. 
+- The difference between descriptive and inferential statistics.
+- The concepts of correlation, regression and causation.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
