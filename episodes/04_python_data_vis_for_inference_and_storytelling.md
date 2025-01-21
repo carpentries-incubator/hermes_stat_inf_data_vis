@@ -278,7 +278,6 @@ plt.show()
 
 ![](fig/output_07.png)
 
-**WE ARE HERE!**
 
 ::::::::::::::::::::::::::::::::::::::: testimonial
 
@@ -310,7 +309,11 @@ plt.show()
 
 ![](fig/output_08.png)
 
-**you can do the same for infering data: draw the line and estimate the values that you don't have yet.**
+In this lesson, you will not learn the exact formula for calculating the position of the regression line or making 
+precise predictions based on it. However, visualizing the regression line remains a valuable tool in data 
+storytelling. It allows you to make approximate guesses about certain values not present in the dataset by 
+inferring them from the available data. You will have the opportunity to practice this skill at the end of 
+this episode. 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -343,17 +346,18 @@ plt.show()
 ![](fig/output_09.png)
 
 ::::::::::::::::::::::::::::::::::::::: discussion
+
 ### Insight
 
 Interesting! Here are some observable trends in the graph: 
 
-- Sub-Saharan African countries have the lowest GDPs, whereas Western European and North American countries have 
+- Sub-Saharan African countries have the lowest `GDP`s, whereas Western European and North American countries have 
 the highest. However, there are countries in the former region in which the `happyScore` is as high as in some 
-Western European countries, regardless of their very low GDP.
-- GDP is highest in Western European countries. However, `happyScore` in a considering number of them is similar 
-to countries in Latin American and Caribbean, even though GDP in these latter regions is lower.
+Western European countries, regardless of their very low `GDP`.
+- `GDP` is highest in Western European countries. However, `happyScore` in a considering number of them is similar 
+to Latin American countries and Caribbean, even though `GDP` in these latter regions is lower.
 - The variation in happiness levels within the same region is greatest among Western European countries, 
-although they all fall into the highest GDP category. 
+although they all fall into the highest `GDP` category. 
 
 Take a closer look at the graph and see if you can identify any additional trends.
 
@@ -382,12 +386,18 @@ plt.show()
 
 ![](fig/output_10.png)
 
+::::::::::::::::::::::::::::::::::::::: discussion
+
+### Insight
+
 Here, another interesting trend emerges: average income only begins to increase significantly once GDP exceeds 
 a value of 1.
 
 What additional insights can you derive from this graph? Consider exploring patterns such as which regions have 
 high `happyScore` values relative to `avg_income`. You might also observe whether certain regions exhibit consistent 
 patterns between `avg_income` and `happyScore` despite differences in `GDP`.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## 4.5. Diving Deeper into Details
 
@@ -430,17 +440,15 @@ plt.show()
 
 ![](fig/output_12.png)
 
-Let’s examine this scatter plot and compare it with the heatmap we created earlier:
-
-The scatter plot reveals that some economically poor countries in Sub-Saharan Africa, such as Mozambique and 
-Liberia, have a low `GDP` and `avg-income` but still demonstrate a high `happyScore`.
-
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
 ## Question
 
-But didn’t the heatmap show a positive correlation between happiness and GDP? Isn’t this a contradiction?!
+The scatter plot reveals that some economically poor countries in Sub-Saharan Africa, such as Mozambique and 
+Liberia, have a low `GDP` and `avg_income` but still demonstrate a high `happyScore`.
+But didn’t the heatmap that we created earlier show a positive correlation between happiness and GDP? Isn’t this 
+a contradiction?!
 
 :::::::::::::::::::::::: solution 
 
@@ -448,8 +456,9 @@ But didn’t the heatmap show a positive correlation between happiness and GDP? 
  
 Yes and no! Remember, we excluded categorical data, such as region and country names, from `happy_df` to create 
 the heatmap. By analyzing only numerical values, we observed a generally positive correlation between `GDP` and 
-`happyScore`. However, the scatter plots and bubble chart suggest that cultural factors specific to each country 
-significantly influence happiness. This impact is especially visible among Sub-Saharan African countries.
+`happyScore`. However, the scatter plots and bubble chart suggest that maybe cultural factors specific to each 
+country are significantly correlated with happiness. This impact is especially visible among Sub-Saharan African 
+countries.
 
 Therefore, if we want to draw an inferential conclusion from our observations, it would be this: happiness appears 
 to be influenced by a combination of GDP, income, and cultural factors. To predict a country’s `happyScore` based 
@@ -462,20 +471,22 @@ country’s average income level.
 ## 4.6. Exercise
 
 Take two countries that are not listed in the DataFrame, for example Iran and Turkey. Given the correlations 
-that we have so far inferred from the dataset, try to predict how high their `happyScore` is. To do so, you 
+that we have so far detected in the dataset, try to predict how high their `happyScore` is. To do so, you 
 need the following information: 
 
 - Which region do these countries belong to? Which countries in `happy_df`are culturally more similar to 
 Iran and Turkey? 
 - How high are `GDP` and `avg_income` in these countries?
 
-look at the scatter plot with a regression line and the bubble chart and try to predict where these two countries, 
-Iran and Turkey, would be placed on the chart. 
+look at the scatter plot with a regression line and the bubble chart and try to predict where the `happy_score`s of  
+these two countries, Iran and Turkey, would be placed on the chart. 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Draw scatter plots, correlograms and bubble chart to infer information from a given dataset
-- Process of storytelling with data, using visualization to create a narrative and predict values
+- Draw scatter plots, bubble charts and correlograms in Python, using the Seaborn library.
+- Implement data visualization for exploratory analysis of a concrete dataset and telling a story 
+based on the trends that it reveals. 
+- Use data visualization to infer information from a concrete dataset. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
