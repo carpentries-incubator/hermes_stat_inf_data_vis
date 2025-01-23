@@ -1,7 +1,7 @@
 ---
 title: 'Conclusion'
 teaching: 10
-exercises: 
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
