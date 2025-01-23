@@ -18,6 +18,9 @@ and predict dataset values through visualization techniques.
 # Author
 This lesson has been developed by [Golnaz Sarkar Farshi](https://github.com/Goli-SF). 
 
+# Verion
+V 2025.01.31
+
 # Funding
 This lesson has been developed as part of the joint project [HERMES](https://hermes-hub.de/) – Humanities Education 
 in Research, Data, and Methods. HERMES is funded by the
