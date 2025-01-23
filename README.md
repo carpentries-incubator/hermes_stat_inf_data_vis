@@ -18,14 +18,14 @@ and predict dataset values through visualization techniques.
 # Author
 This lesson has been developed by [Golnaz Sarkar Farshi](https://github.com/Goli-SF). 
 
-# Verion
-V 2025.01.31
-
 # Funding
 This lesson has been developed as part of the joint project [HERMES](https://hermes-hub.de/) – Humanities Education 
 in Research, Data, and Methods. HERMES is funded by the
 [German Federal Ministry of Education and Research (BMBF)](https://www.bmbf.de/bmbf/en/home/home_node.html) 
 through grants from the European Union.
 
+# Verion
+V 2025.01.31
+
 # License
-Lesson content is published with a [CC-BY license](LICENSE.md).
+This lesson has a [CC-BY license](LICENSE.md).
