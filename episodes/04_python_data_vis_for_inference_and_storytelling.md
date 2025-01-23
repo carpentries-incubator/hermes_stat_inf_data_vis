@@ -480,7 +480,7 @@ need the following information:
 Iran and Turkey? 
 - How high are `GDP` and `avg_income` in these countries?
 
-look at the scatter plot with a regression line and the bubble chart and try to predict where the `happy_score`s of  
+look at the scatter plot with a regression line and the bubble chart and try to predict where the `happy_score`s of 
 these two countries, Iran and Turkey, would be placed on the chart. 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
