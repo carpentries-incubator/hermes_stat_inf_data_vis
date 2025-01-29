@@ -510,7 +510,7 @@ in the humanities.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Data visualization has multiple purposes. It can help you understand
 trends and correlations in a dataset. It can also help you introduce a
@@ -953,25 +953,32 @@ code.</p>
 <p>The dataset we’re working with is stored in a CSV (comma-separated
 values) file on GitHub. Let’s load it into our notebook and store it in
 a pandas DataFrame named <code>happy_df</code>:</p>
-<pre><code>import pandas as pd
-
-# path to the dataset:
-url= "https://raw.githubusercontent.com/HERMES-DKZ/stat_inf_data_vis/main/episodes/data/income_happiness_correlation.csv"
-
-# loading the dataset and storing it in a pandas DataFrame:
-happy_df= pd.read_csv(url)
-
-# displaying the first five rows of the DataFrame:
-happy_df.head()
-</code></pre>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="co"># path to the dataset: </span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>url<span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/HERMES-DKZ/stat_inf_data_vis/main/episodes/data/income_happiness_correlation.csv"</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="co"># loading the dataset and storing it in a pandas DataFrame:</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>happy_df<span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="co"># displaying the first five rows of the DataFrame: </span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>happy_df.head()</span></code></pre>
+</div>
 <figure><img src="fig/output_01.png" class="figure mx-auto d-block"></figure><p>Take a moment to examine the first five rows of the DataFrame. What
 types of values do you see in each column? Which columns contain
 numerical values, and which contain categorical values? What information
 does the dataset include, and what information might be missing?</p>
 <p>Run the following line of code to gain more information about the
 structure of <code>happy_df</code>:</p>
-<pre><code><span><span class="co"># displaying information about the DataFrame:</span></span>
-<span><span class="fu">happy_df.info</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># displaying information about the DataFrame:</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>happy_df.info()</span></code></pre>
+</div>
 <figure><img src="fig/output_02.png" class="figure mx-auto d-block"></figure><div id="question" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1017,30 +1024,38 @@ one <em>numerical value</em> are correlated with changes in another
 numerical features that could be correlated with
 <code>happyScore</code>, we need to exclude the columns in
 <code>happy_df</code> that contain non-numerical values:</p>
-<pre><code># selecting only the columns whose values are not of type 'object' and storing them in a new DataFrame:
-numerical_df= happy_df.select_dtypes(exclude=['object'])
-
-# displaying the first five rows of the new DataFrame:
-numerical_df.head()</code></pre>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># selecting only the columns whose values are not of type 'object' and storing them in a new DataFrame:</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>numerical_df<span class="op">=</span> happy_df.select_dtypes(exclude<span class="op">=</span>[<span class="st">'object'</span>])</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co"># displaying the first five rows of the new DataFrame:</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>numerical_df.head()</span></code></pre>
+</div>
 <figure><img src="fig/output_03.png" class="figure mx-auto d-block"></figure><p>Now, let’s use the Python library <a href="https://seaborn.pydata.org/" class="external-link">Seaborn</a> to create a heatmap of
 all the values in <code>numerical_df</code>:</p>
-<pre><code>import matplotlib.pyplot as plt
-import seaborn as sns
-
-# creating a matrix that contains the correlation of every feature in the DataFrame with every other feature:
-corr= numerical_df.corr(method='pearson')
-
-# defining the size of the graph:
-plt.figure(figsize=(9, 7))
-
-# generating a heatmap of the corr matrix, using the seaborn library:
-sns.heatmap(corr, annot=True, fmt=".2f", cmap='coolwarm', cbar=True)
-
-# giving the graph a title:
-plt.title('correlation heatmap')
-
-# diyplaying the graph:
-plt.show()</code></pre>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co"># creating a matrix that contains the correlation of every feature in the DataFrame with every other feature:</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>corr<span class="op">=</span> numerical_df.corr(method<span class="op">=</span><span class="st">'pearson'</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co"># defining the size of the graph: </span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">7</span>))</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="co"># generating a heatmap of the corr matrix, using the seaborn library:</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>sns.heatmap(corr, annot<span class="op">=</span><span class="va">True</span>, fmt<span class="op">=</span><span class="st">".2f"</span>, cmap<span class="op">=</span><span class="st">'coolwarm'</span>, cbar<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a><span class="co"># giving the graph a title:</span></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>plt.title(<span class="st">'correlation heatmap'</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a><span class="co"># diyplaying the graph: </span></span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>plt.show()</span></code></pre>
+</div>
 <figure><img src="fig/output_04.png" class="figure mx-auto d-block"></figure><p>In the code above, we’ve set <code>cmap='coolwarm'</code>. This means
 we want the heatmap to distinguish between negative and positive
 correlations using red and blue colors. More saturated shades of blue or
@@ -1108,18 +1123,26 @@ correlation coefficient being +1.</li>
 <p>To create a more precise graph without redundant information, let’s
 retain only one column from the DataFrame that contains data on
 satisfaction or income, and remove the others:</p>
-<pre><code># dropping a list of columns from numerical_df and storing the result in a new DataFrame:
-reduced_numerical_df= numerical_df.drop(['adjusted_satisfaction', 'std_satisfaction', 'median_income'], axis=1)
-
-reduced_numerical_df.head()</code></pre>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># dropping a list of columns from numerical_df and storing the result in a new DataFrame:</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>reduced_numerical_df<span class="op">=</span> numerical_df.drop([<span class="st">'adjusted_satisfaction'</span>, <span class="st">'std_satisfaction'</span>, <span class="st">'median_income'</span>], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>reduced_numerical_df.head()</span></code></pre>
+</div>
 <figure><img src="fig/output_05.png" class="figure mx-auto d-block"></figure><p>Let’s create the heatmap again, this time using
 <code>reduced_numerical_df</code> insted of
 <code>numerical_df</code>:</p>
-<pre><code>corr= reduced_numerical_df.corr(method='pearson')
-plt.figure(figsize=(5.5, 4))
-sns.heatmap(corr, annot=True, fmt=".2f", cmap='coolwarm', cbar=True)
-plt.title('reduced correlation heatmap')
-plt.show()</code></pre>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>corr<span class="op">=</span> reduced_numerical_df.corr(method<span class="op">=</span><span class="st">'pearson'</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="fl">5.5</span>, <span class="dv">4</span>))</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>sns.heatmap(corr, annot<span class="op">=</span><span class="va">True</span>, fmt<span class="op">=</span><span class="st">".2f"</span>, cmap<span class="op">=</span><span class="st">'coolwarm'</span>, cbar<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>plt.title(<span class="st">'reduced correlation heatmap'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>plt.show()</span></code></pre>
+</div>
 <figure><img src="fig/output_06.png" class="figure mx-auto d-block"></figure><div id="insight" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -1165,32 +1188,36 @@ relationships. We’ll start by visualizing the correlation between
 <code>happyScore</code> and another variable with a strong positive
 correlation, such as <code>GDP</code>. To achieve this, we can create a
 scatter plot:</p>
-<pre><code># defining the size of the graph:
-plt.figure(figsize=(8, 4))
-
-# creating a scatte plot, using the seaborn library:
-sns.scatterplot(data=happy_df, x='GDP', y='happyScore', zorder=3)
-
-"""
-The following block of code enhances the visual appeal of the graph:
-"""
-# adding grid to the plot:
-plt.grid(True, zorder=0, color='lightgray', linestyle='-', linewidth=0.3)
-
-# removing all spines (edges):
-sns.despine(left=True, bottom=True)
-
-# setting the background color:
-plt.gca().set_facecolor('whitesmoke')
-"""
-End of customization
-"""
-
-# giving the graph a title:
-plt.title('correlation between GDP and happyScore')
-
-# diyplaying the graph:
-plt.show()</code></pre>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># defining the size of the graph: </span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="co"># creating a scatte plot, using the seaborn library:</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>happy_df, x<span class="op">=</span><span class="st">'GDP'</span>, y<span class="op">=</span><span class="st">'happyScore'</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="co">The following block of code enhances the visual appeal of the graph:</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="co"># adding grid to the plot:</span></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>plt.grid(<span class="va">True</span>, zorder<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'lightgray'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, linewidth<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="co"># removing all spines (edges):</span></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>sns.despine(left<span class="op">=</span><span class="va">True</span>, bottom<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="co"># setting the background color:</span></span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a>plt.gca().set_facecolor(<span class="st">'whitesmoke'</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="co">End of customization </span></span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a><span class="co"># giving the graph a title:</span></span>
+<span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a>plt.title(<span class="st">'correlation between GDP and happyScore'</span>)</span>
+<span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a><span class="co"># diyplaying the graph: </span></span>
+<span id="cb7-26"><a href="#cb7-26" tabindex="-1"></a>plt.show()</span></code></pre>
+</div>
 <figure><img src="fig/output_07.png" class="figure mx-auto d-block"></figure><div id="fun-fact" class="callout testimonial">
 <div class="callout-square">
 <i class="callout-icon" data-feather="heart"></i>
@@ -1207,19 +1234,23 @@ as you learned in the previous chapter, is called a <em>regression
 line</em>. The method used to calculate the line’s position is known as
 <em>linear regression</em> in statistics. Here is the code to display
 the regression line on the graph:</p>
-<pre><code>plt.figure(figsize=(8, 4))
-
-sns.scatterplot(data=happy_df, x='GDP', y='happyScore', zorder=3)
-
-plt.grid(True, zorder=0, color='lightgray', linestyle='-', linewidth=0.3)
-sns.despine(left=True, bottom=True)
-plt.gca().set_facecolor('whitesmoke')
-
-# adding a regression line to the graph:
-sns.regplot(data=happy_df, x='GDP', y='happyScore', scatter=False, color='red', line_kws={'zorder': 2, 'linewidth': 0.7})
-
-plt.title('GDP vs. happyScore with regression line')
-plt.show()</code></pre>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>happy_df, x<span class="op">=</span><span class="st">'GDP'</span>, y<span class="op">=</span><span class="st">'happyScore'</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>plt.grid(<span class="va">True</span>, zorder<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'lightgray'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, linewidth<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>sns.despine(left<span class="op">=</span><span class="va">True</span>, bottom<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>plt.gca().set_facecolor(<span class="st">'whitesmoke'</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co"># adding a regression line to the graph:</span></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>sns.regplot(data<span class="op">=</span>happy_df, x<span class="op">=</span><span class="st">'GDP'</span>, y<span class="op">=</span><span class="st">'happyScore'</span>, scatter<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span><span class="st">'red'</span>, line_kws<span class="op">=</span>{<span class="st">'zorder'</span>: <span class="dv">2</span>, <span class="st">'linewidth'</span>: <span class="fl">0.7</span>})</span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a>plt.title(<span class="st">'GDP vs. happyScore with regression line'</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a>plt.show()</span></code></pre>
+</div>
 <figure><img src="fig/output_08.png" class="figure mx-auto d-block"></figure><p>In this lesson, you will not learn the exact formula for calculating
 the position of the regression line or making precise predictions based
 on it. However, visualizing the regression line remains a valuable tool
@@ -1241,20 +1272,24 @@ couldn’t display regions due to their categorical nature, the scatter
 plot allows us to assign a unique color to each region. This way, we can
 see which regions tend to have the highest <code>GDP</code> and
 <code>happyScore</code> values:</p>
-<pre><code>plt.figure(figsize=(8, 4))
-
-# adding region to the graph as hue:
-sns.scatterplot(data=happy_df, x='GDP', y='happyScore', hue='region', palette='Paired', alpha=0.8, zorder=3)
-
-plt.grid(True, zorder=0, color='lightgray', linestyle='-', linewidth=0.3)
-sns.despine(left=True, bottom=True)
-plt.gca().set_facecolor('whitesmoke')
-
-# adding a legend to the graph:
-plt.legend(title='Region', title_fontsize='10', fontsize='9', bbox_to_anchor=(1.05, 1), loc='upper left')
-
-plt.title('correlation between GDP, region and happyScore')
-plt.show()</code></pre>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co"># adding region to the graph as hue:</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>happy_df, x<span class="op">=</span><span class="st">'GDP'</span>, y<span class="op">=</span><span class="st">'happyScore'</span>, hue<span class="op">=</span><span class="st">'region'</span>, palette<span class="op">=</span><span class="st">'Paired'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>plt.grid(<span class="va">True</span>, zorder<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'lightgray'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, linewidth<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>sns.despine(left<span class="op">=</span><span class="va">True</span>, bottom<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>plt.gca().set_facecolor(<span class="st">'whitesmoke'</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="co"># adding a legend to the graph:</span></span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">'Region'</span>, title_fontsize<span class="op">=</span><span class="st">'10'</span>, fontsize<span class="op">=</span><span class="st">'9'</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">1.05</span>, <span class="dv">1</span>), loc<span class="op">=</span><span class="st">'upper left'</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a>plt.title(<span class="st">'correlation between GDP, region and happyScore'</span>)</span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>plt.show()</span></code></pre>
+</div>
 <figure><img src="fig/output_09.png" class="figure mx-auto d-block"></figure><div id="insight-1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -1291,18 +1326,22 @@ additional trends.</p>
 it correlates with <code>region</code>, <code>GDP</code> and
 <code>happyScore</code>. We’ll add <code>avg_income</code> as the node
 size in the scatter plot, creating a bubble chart:</p>
-<pre><code>plt.figure(figsize=(8, 5))
-
-# adding avg_income to the graph as node size:
-sns.scatterplot(data=happy_df, x='GDP', y='happyScore', hue='region', size='avg_income', sizes=(20,500), palette='Paired', alpha=0.6, zorder=3)
-
-plt.grid(True, zorder=0, color='lightgray', linestyle='-', linewidth=0.3)
-sns.despine(left=True, bottom=True)
-plt.gca().set_facecolor('whitesmoke')
-plt.legend(fontsize='9', bbox_to_anchor=(1.05, 1), loc='upper left')
-
-plt.title('correlation between GDP, region, avg_income and happyScore')
-plt.show()</code></pre>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="co"># adding avg_income to the graph as node size:</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>happy_df, x<span class="op">=</span><span class="st">'GDP'</span>, y<span class="op">=</span><span class="st">'happyScore'</span>, hue<span class="op">=</span><span class="st">'region'</span>, size<span class="op">=</span><span class="st">'avg_income'</span>, sizes<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">500</span>), palette<span class="op">=</span><span class="st">'Paired'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>plt.grid(<span class="va">True</span>, zorder<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'lightgray'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, linewidth<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>sns.despine(left<span class="op">=</span><span class="va">True</span>, bottom<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>plt.gca().set_facecolor(<span class="st">'whitesmoke'</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>plt.legend(fontsize<span class="op">=</span><span class="st">'9'</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">1.05</span>, <span class="dv">1</span>), loc<span class="op">=</span><span class="st">'upper left'</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a>plt.title(<span class="st">'correlation between GDP, region, avg_income and happyScore'</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>plt.show()</span></code></pre>
+</div>
 <figure><img src="fig/output_10.png" class="figure mx-auto d-block"></figure><div id="insight-2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -1327,32 +1366,40 @@ differences in <code>GDP</code>.</p>
 <p>As a final step in our exploration, let’s focus on the countries in
 Sub-Saharan Africa to identify which ones have a low <code>GDP</code>
 but a high <code>happyScore</code>:</p>
-<pre><code><span><span class="co"># selecting only the countries that belong to the Sub-Saharan Africa and storing them in a new DataFrame:</span></span>
-<span><span class="va">african_df</span><span class="op">=</span> <span class="va">happy_df</span><span class="op">[</span><span class="va">happy_df</span><span class="op">[</span><span class="st">'region'</span><span class="op">]</span><span class="op">==</span><span class="st">"'Sub-Saharan Africa'"</span><span class="op">]</span></span>
-<span></span>
-<span><span class="fu">african_df.head</span><span class="op">(</span><span class="op">)</span></span></code></pre>
-<figure><img src="fig/output_11.png" class="figure mx-auto d-block"></figure><pre><code>plt.figure(figsize=(10, 7))
-
-sns.scatterplot(data=african_df, x='GDP', y='happyScore', size='avg_income', sizes=(20, 200), alpha=0.6, zorder=3)
-
-plt.grid(True, zorder=0, color='lightgray', linestyle='-', linewidth=0.3)
-sns.despine(left=True, bottom=True)
-plt.gca().set_facecolor('whitesmoke')
-
-# adding country names to the nodes:
-for i in range(len(african_df)):
-    plt.text(
-        african_df['GDP'].iloc[i],
-        african_df['happyScore'].iloc[i]+0.03,
-        african_df['country'].iloc[i],
-        fontsize=7,
-        ha='center',
-        va='bottom'
-    )
-
-plt.legend(fontsize='9', bbox_to_anchor=(1.05, 1), loc='upper left')
-plt.title('correlation between GDP, avg_income and happyScore in Sub-Saharan Africa')
-plt.show()</code></pre>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># selecting only the countries that belong to the Sub-Saharan Africa and storing them in a new DataFrame:</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>african_df<span class="op">=</span> happy_df[happy_df[<span class="st">'region'</span>]<span class="op">==</span><span class="st">"'Sub-Saharan Africa'"</span>]</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>african_df.head()</span></code></pre>
+</div>
+<figure><img src="fig/output_11.png" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">7</span>))</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>african_df, x<span class="op">=</span><span class="st">'GDP'</span>, y<span class="op">=</span><span class="st">'happyScore'</span>, size<span class="op">=</span><span class="st">'avg_income'</span>, sizes<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">200</span>), alpha<span class="op">=</span><span class="fl">0.6</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a>plt.grid(<span class="va">True</span>, zorder<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'lightgray'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, linewidth<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a>sns.despine(left<span class="op">=</span><span class="va">True</span>, bottom<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a>plt.gca().set_facecolor(<span class="st">'whitesmoke'</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a><span class="co"># adding country names to the nodes:</span></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(african_df)):</span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a>    plt.text(</span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a>        african_df[<span class="st">'GDP'</span>].iloc[i],</span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a>        african_df[<span class="st">'happyScore'</span>].iloc[i]<span class="op">+</span><span class="fl">0.03</span>,</span>
+<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a>        african_df[<span class="st">'country'</span>].iloc[i],</span>
+<span id="cb12-15"><a href="#cb12-15" tabindex="-1"></a>        fontsize<span class="op">=</span><span class="dv">7</span>,</span>
+<span id="cb12-16"><a href="#cb12-16" tabindex="-1"></a>        ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb12-17"><a href="#cb12-17" tabindex="-1"></a>        va<span class="op">=</span><span class="st">'bottom'</span></span>
+<span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a>    )</span>
+<span id="cb12-19"><a href="#cb12-19" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" tabindex="-1"></a>plt.legend(fontsize<span class="op">=</span><span class="st">'9'</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">1.05</span>, <span class="dv">1</span>), loc<span class="op">=</span><span class="st">'upper left'</span>)</span>
+<span id="cb12-21"><a href="#cb12-21" tabindex="-1"></a>plt.title(<span class="st">'correlation between GDP, avg_income and happyScore in Sub-Saharan Africa'</span>)</span>
+<span id="cb12-22"><a href="#cb12-22" tabindex="-1"></a>plt.show()</span></code></pre>
+</div>
 <figure><img src="fig/output_12.png" class="figure mx-auto d-block"></figure><div id="question-2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
