@@ -16,11 +16,11 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Creating scatter plots, bubble charts and correlograms in Python, using the Seaborn library.
-- Implementing data visualization for exploratory analysis of a concrete dataset and telling a story 
+- Create scatter plots, bubble charts and correlograms in Python, using the Seaborn library.
+- Implement data visualization for exploratory analysis of a concrete dataset and tell a story 
 based on the trends that it reveals. 
-- Using data visualization to infer information from a concrete dataset. 
-- Reflecting on the use cases of data visualization in humanities research. 
+- Use data visualization to infer information from a concrete dataset. 
+- Reflect on the use cases of data visualization in humanities research. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -59,14 +59,11 @@ Let’s answer these questions for our dataset by writing some code.
 The dataset we're working with is stored in a CSV (comma-separated values) file on GitHub. Let's load it into 
 our notebook and store it in a pandas DataFrame named `happy_df`: 
 
-<span style="color: red;">The url below should be updated later, when the lesson is pushed to the incubator.</span> 
-
 ```
 import pandas as pd
 
 # path to the dataset: 
-url= "https://raw.githubusercontent.com/HERMES-DKZ/data_challenges_data_carpentries/main/\
-data_carpentries/statistical_inferece_data_visualization/data_statistical_inference_data_visualization/income_happiness_correlation.csv"
+url= "https://raw.githubusercontent.com/HERMES-DKZ/stat_inf_data_vis/main/episodes/data/income_happiness_correlation.csv"
 
 # loading the dataset and storing it in a pandas DataFrame:
 happy_df= pd.read_csv(url)

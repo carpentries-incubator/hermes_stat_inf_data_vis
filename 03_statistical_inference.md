@@ -14,9 +14,9 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain the mathematical concept of statistical inference to humanities students and researchers.
-- Explain the difference between descriptive and inferential statistics, correlation and causation. 
-- Explain the meaning of regression. 
+- Understand the mathematical concept of statistical inference.
+- Understand the difference between descriptive and inferential statistics, correlation and causation. 
+- Understand the meaning of regression. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

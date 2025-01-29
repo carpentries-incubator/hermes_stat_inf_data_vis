@@ -14,11 +14,12 @@ exercises: 0
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
+After completing this lesson, learners will be able to ...
 
-- Introduce the use cases of data visualization for the humanities.
-- Introduce the concept of statistical inference to humanities researchers.
-- Teach humanities researchers to visualize data with python to infer information from it.
-- Teach humanities researchers to use data visualization and statistical inference for data storytelling.
+- Understand the use cases of data visualization for the humanities.
+- Understand the concept of statistical inference to humanities researchers.
+- Visualize data with python to infer information from it.
+- Use data visualization and statistical inference for data storytelling.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
