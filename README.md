@@ -1,5 +1,7 @@
 # Data Visualization for Storytelling and Statistical Inference
 
+[![DOI](https://zenodo.org/badge/917005908.svg)](https://doi.org/10.5281/zenodo.14762405)
+
 The main goal of this lesson is to demonstrate the importance of data visualization and how it can unlock a 
 variety of learning and research pathways—ranging from exploratory data analysis and statistical inference to 
 understanding machine learning processes and data storytelling.
