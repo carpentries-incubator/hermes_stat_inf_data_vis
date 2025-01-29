@@ -24,8 +24,5 @@ in Research, Data, and Methods. HERMES is funded by the
 [German Federal Ministry of Education and Research (BMBF)](https://www.bmbf.de/bmbf/en/home/home_node.html) 
 through grants from the European Union.
 
-# Verion
-V2025.01.31
-
 # License
 This lesson has a [CC-BY license](LICENSE.md).
