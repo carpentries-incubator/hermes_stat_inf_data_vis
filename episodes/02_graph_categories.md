@@ -14,8 +14,8 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Discuss the benefits of data visualization in humanities research.
-- Explore the most effective graph types for data visualization in the humanities.
+- Learn about the benefits of data visualization in humanities research.
+- Learn some of the most effective graph types for data visualization in the humanities.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

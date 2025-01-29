@@ -2,18 +2,13 @@
 title: Setup
 ---
 
-In this lesson, you'll explore the different types of graphs and 
-their use cases. You'll then dive into the concept of statistical 
-inference. Next, you'll get hands-on with Python coding to analyze 
-the happiness and income dataset provided below. Finally, you'll 
-use the graphs you've created to make informed estimates about 
-countries not included in the dataset.
 
 :::::::::::::::: callout
 ### What background knowledge do you need for this lesson?
 
-1. Basic acquaintance with Python
-2. Basic mathematical background
+1. Basic acquaintance with Python: you should know how to import Python packages and load data into your code.
+You also need basic familiarity with Python syntax. 
+2. Basic mathematical background: you need a basic understanding of statistics and probabilities. 
 3. Curiosity to learn more about Python programming, statistics and data storytelling
 ::::::::::::::::::
 
@@ -25,11 +20,8 @@ If you wish to save the the dataset on your computer, go ahead and download the
 Otherwise, you can directly load it into your code later using the following link:
 
 ```
-https://raw.githubusercontent.com/Goli-SF/stat_inf_data_vis/tree/main/episodes/data/income_happiness_correlation.csv
+https://raw.githubusercontent.com/HERMES-DKZ/stat_inf_data_vis/main/episodes/data/income_happiness_correlation.csv
 ```
-
-<span style="color: red;">The above link should be updated later, when the lesson is pushed to the incubator.</span> 
-
 
 ## Software Setup
 

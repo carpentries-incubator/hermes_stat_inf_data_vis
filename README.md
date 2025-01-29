@@ -25,7 +25,7 @@ in Research, Data, and Methods. HERMES is funded by the
 through grants from the European Union.
 
 # Verion
-V 2025.01.31
+V2025.01.31
 
 # License
 This lesson has a [CC-BY license](LICENSE.md).
