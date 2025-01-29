@@ -59,7 +59,7 @@ Let’s answer these questions for our dataset by writing some code.
 The dataset we're working with is stored in a CSV (comma-separated values) file on GitHub. Let's load it into 
 our notebook and store it in a pandas DataFrame named `happy_df`: 
 
-```
+```python
 import pandas as pd
 
 # path to the dataset: 
@@ -81,7 +81,7 @@ include, and what information might be missing?
 
 Run the following line of code to gain more information about the structure of `happy_df`: 
 
-```
+```python
 # displaying information about the DataFrame:
 happy_df.info()
 
@@ -119,7 +119,7 @@ can only show how changes in one *numerical value* are correlated with changes i
 Therefore, to create a heatmap of all numerical features that could be correlated with `happyScore`, we need to 
 exclude the columns in `happy_df` that contain non-numerical values:
 
-```
+```python
 # selecting only the columns whose values are not of type 'object' and storing them in a new DataFrame:
 numerical_df= happy_df.select_dtypes(exclude=['object'])
 
@@ -132,7 +132,7 @@ numerical_df.head()
 Now, let's use the Python library [Seaborn](https://seaborn.pydata.org/) to create a heatmap of all the values 
 in `numerical_df`:
 
-```
+```python
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -197,7 +197,7 @@ satisfaction degree. The same is true about `avg_income` and `median_income` wit
 To create a more precise graph without redundant information, let's retain only one column from the 
 DataFrame that contains data on satisfaction or income, and remove the others:
 
-```
+```python
 # dropping a list of columns from numerical_df and storing the result in a new DataFrame:
 reduced_numerical_df= numerical_df.drop(['adjusted_satisfaction', 'std_satisfaction', 'median_income'], axis=1)
 
@@ -208,7 +208,7 @@ reduced_numerical_df.head()
 
 Let's create the heatmap again, this time using `reduced_numerical_df` insted of `numerical_df`:
 
-```
+```python
 corr= reduced_numerical_df.corr(method='pearson')
 plt.figure(figsize=(5.5, 4))
 sns.heatmap(corr, annot=True, fmt=".2f", cmap='coolwarm', cbar=True)
@@ -246,7 +246,7 @@ Now that we have a general understanding of the correlations within the `happy_d
 look at these relationships. We’ll start by visualizing the correlation between `happyScore` and another variable 
 with a strong positive correlation, such as `GDP`. To achieve this, we can create a scatter plot: 
 
-```
+```python
 # defining the size of the graph: 
 plt.figure(figsize=(8, 4))
 
@@ -290,7 +290,7 @@ line is minimized. This line, as you learned in the previous chapter, is called 
 The method used to calculate the line's position is known as *linear regression* in statistics. Here is the 
 code to display the regression line on the graph:
 
-```
+```python
 plt.figure(figsize=(8, 4))
 
 sns.scatterplot(data=happy_df, x='GDP', y='happyScore', zorder=3)
@@ -325,7 +325,7 @@ the heatmap, which couldn’t display regions due to their categorical nature, t
 a unique color to each region. This way, we can see which regions tend to have the highest `GDP` and `happyScore` 
 values:
 
-```
+```python
 plt.figure(figsize=(8, 4))
 
 # adding region to the graph as hue:
@@ -368,7 +368,7 @@ Let’s add one more variable to the graph to explore how `avg_income` is distri
 and how it correlates with `region`,  `GDP` and `happyScore`. We’ll add `avg_income` as the node size in the 
 scatter plot, creating a bubble chart:
 
-```
+```python
 plt.figure(figsize=(8, 5))
 
 # adding avg_income to the graph as node size:
@@ -403,7 +403,7 @@ patterns between `avg_income` and `happyScore` despite differences in `GDP`.
 As a final step in our exploration, let’s focus on the countries in Sub-Saharan Africa to identify which ones have 
 a low `GDP` but a high `happyScore`:
 
-```
+```python
 # selecting only the countries that belong to the Sub-Saharan Africa and storing them in a new DataFrame:
 african_df= happy_df[happy_df['region']=="'Sub-Saharan Africa'"]
 
@@ -412,7 +412,7 @@ african_df.head()
 
 ![](fig/output_11.png)
 
-```
+```python
 plt.figure(figsize=(10, 7))
 
 sns.scatterplot(data=african_df, x='GDP', y='happyScore', size='avg_income', sizes=(20, 200), alpha=0.6, zorder=3)
