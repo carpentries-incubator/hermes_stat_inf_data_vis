@@ -407,7 +407,7 @@ a pandas DataFrame named <code>happy_df</code>:</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="co"># path to the dataset: </span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>url<span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/carpentries-incubator/stat_inf_data_vis/main/episodes/data/income_happiness_correlation.csv"</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>url<span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/carpentries-incubator/hermes_stat_inf_data_vis/main/episodes/data/income_happiness_correlation.csv"</span></span>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="co"># loading the dataset and storing it in a pandas DataFrame:</span></span>
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>happy_df<span class="op">=</span> pd.read_csv(url)</span>
@@ -446,7 +446,7 @@ columns in the dataset?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Intuitively, one might assume that the <code>happyScore</code> column
 contains values that could be predicted based on the other features. So,
@@ -548,7 +548,7 @@ similar rate.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul><li>Each feature is most strongly correlated with itself, with a
 correlation coefficient of +1.</li>
@@ -853,7 +853,7 @@ this a contradiction?!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Yes and no! Remember, we excluded categorical data, such as region
 and country names, from <code>happy_df</code> to create the heatmap. By
