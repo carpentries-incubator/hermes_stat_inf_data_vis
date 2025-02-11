@@ -63,7 +63,7 @@ our notebook and store it in a pandas DataFrame named `happy_df`:
 import pandas as pd
 
 # path to the dataset: 
-url= "https://raw.githubusercontent.com/HERMES-DKZ/stat_inf_data_vis/main/episodes/data/income_happiness_correlation.csv"
+url= "https://raw.githubusercontent.com/carpentries-incubator/stat_inf_data_vis/main/episodes/data/income_happiness_correlation.csv"
 
 # loading the dataset and storing it in a pandas DataFrame:
 happy_df= pd.read_csv(url)
