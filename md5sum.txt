@@ -10,6 +10,6 @@
 "episodes/04_python_data_vis_for_inference_and_storytelling.md" "493069c74259a38555ea37a3f380f720" "site/built/04_python_data_vis_for_inference_and_storytelling.md" "2025-01-29"
 "episodes/05_conclusion.md" "2d6e8ac94b364f53875e99c877cede27" "site/built/05_conclusion.md" "2025-01-23"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2025-01-08"
-"learners/setup.md" "be77e8a672bab5563b307fffa0949b4b" "site/built/setup.md" "2025-01-29"
+"learners/setup.md" "cedf35c019c4ca43e6ac4fe95a375905" "site/built/setup.md" "2025-02-11"
 "learners/reference.md" "54beb20f8a6a0ad96f524afd3b677606" "site/built/reference.md" "2025-01-29"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2025-01-08"
