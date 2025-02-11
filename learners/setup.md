@@ -20,7 +20,7 @@ If you wish to save the the dataset on your computer, go ahead and download the
 Otherwise, you can directly load it into your code later using the following link:
 
 ```
-https://raw.githubusercontent.com/HERMES-DKZ/stat_inf_data_vis/main/episodes/data/income_happiness_correlation.csv
+https://raw.githubusercontent.com/carpentries-incubator/stat_inf_data_vis/main/episodes/data/income_happiness_correlation.csv
 ```
 
 ## Software Setup
