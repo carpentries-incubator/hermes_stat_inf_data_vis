@@ -23,7 +23,7 @@ This lesson has been developed by [Golnaz Sarkar Farshi](https://github.com/Goli
 # Funding
 This lesson has been developed as part of the joint project [HERMES](https://hermes-hub.de/) – Humanities Education 
 in Research, Data, and Methods. HERMES is funded by the
-[German Federal Ministry of Education and Research (BMBF)](https://www.bmbf.de/bmbf/en/home/home_node.html) 
+[German Federal Ministry of Research, Technology and Space (BMFTR)](https://www.bmftr.bund.de/EN/Home/home_node.html) 
 through grants from the European Union.
 
 # License
