@@ -1,6 +1,6 @@
 ---
 title: 'Data Visualization with Python for Statistical Inference and Storytelling'
-teaching: 45
+teaching: 120
 exercises: 15
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Statistical Inference'
-teaching: 10
+teaching: 90
 exercises: 0
 ---
 
