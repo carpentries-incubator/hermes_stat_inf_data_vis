@@ -1,6 +1,6 @@
 ---
 title: 'Graph Categories'
-teaching: 15
+teaching: 90
 exercises: 0
 ---
 
